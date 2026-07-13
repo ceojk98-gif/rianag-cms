@@ -843,7 +843,7 @@ Watch on</textarea>
                       <div class="sp" style="flex:1"></div>
                       <button class="wf-btn ghost">답장(메일)</button><button class="wf-btn">저장</button>
                     </div>
-                    <div class="field" style="margin-top:12px"><label class="flabel">내부 메모</label><textarea class="inp" rows="2" placeholder="담당자 배정·진행 메모 (관리자만 표시)"></textarea></div>
+                    <div class="field" style="margin-top:12px"><label class="flabel">내부 메모</label><textarea class="inp" rows="2" readonly>1차 미팅 일정 조율 중 · 담당 김대리 배정 · 예산 규모/기간 확인 필요</textarea></div>
                   </div>
                 </div>
               </div>
@@ -908,11 +908,11 @@ Watch on</textarea>
                   <div class="card" style="background:#f8fafc">
                     <div style="font-size:13px;font-weight:800;margin-bottom:2px">Let’s collaborate</div>
                     <div class="mini" style="margin-bottom:14px">프로젝트·견적 문의를 남겨주세요.</div>
-                    <div class="field"><label class="flabel">이름 <span class="req">*</span></label><input class="inp" placeholder="이름"></div>
-                    <div class="field"><label class="flabel">회사 / 브랜드</label><input class="inp" placeholder="회사명"></div>
-                    <div class="frow"><div class="field"><label class="flabel">연락처 <span class="req">*</span></label><input class="inp" placeholder="010-"></div><div class="field"><label class="flabel">이메일 <span class="req">*</span></label><input class="inp" placeholder="you@"></div></div>
+                    <div class="field"><label class="flabel">이름 <span class="req">*</span></label><input class="inp" value="김서연"></div>
+                    <div class="field"><label class="flabel">회사 / 브랜드</label><input class="inp" value="(주)메가박스"></div>
+                    <div class="frow"><div class="field"><label class="flabel">연락처 <span class="req">*</span></label><input class="inp" value="010-1234-5678"></div><div class="field"><label class="flabel">이메일 <span class="req">*</span></label><input class="inp" value="seoyeon.kim@megabox.co.kr"></div></div>
                     <div class="field"><label class="flabel">문의 유형</label><select class="inp"><option>프로젝트 의뢰</option><option>견적</option><option>제휴</option><option>기타</option></select></div>
-                    <div class="field"><label class="flabel">문의 내용 <span class="req">*</span></label><textarea class="inp" rows="2" placeholder="내용을 입력하세요"></textarea></div>
+                    <div class="field"><label class="flabel">문의 내용 <span class="req">*</span></label><textarea class="inp" rows="2" readonly>모바일 예매 플로우 전면 리뉴얼을 검토 중입니다. UX 진단부터 협의 가능할까요?</textarea></div>
                     <div class="field" style="margin-bottom:0"><label class="flabel">파일 첨부</label><div class="drop" style="padding:12px">📎 파일 선택</div></div>
                     <button class="wf-btn" style="width:100%;justify-content:center;margin-top:12px">문의 보내기</button>
                   </div>
@@ -1057,7 +1057,7 @@ Watch on</textarea>
                       <div class="sp" style="flex:1"></div>
                       <button class="wf-btn ghost">메일 회신</button><button class="wf-btn">저장</button>
                     </div>
-                    <div class="field" style="margin-top:12px"><label class="flabel">평가 메모</label><textarea class="inp" rows="2" placeholder="면접관 평가·메모 (관리자만 표시)"></textarea></div>
+                    <div class="field" style="margin-top:12px"><label class="flabel">평가 메모</label><textarea class="inp" rows="2" readonly>포트폴리오 완성도 우수 · 커머스 기획 경험 적합 · 1차 면접 진행 예정</textarea></div>
                   </div>
                 </div>
               </div>
@@ -1112,7 +1112,7 @@ Watch on</textarea>
                   <div class="card">
                     <h5><span class="nchip">3</span>보안</h5>
                     <div class="field"><label class="flabel">로그인 세션 유지</label><span class="seg"><span class="on">12시간</span><span>1일</span><span>7일</span></span></div>
-                    <div class="field"><label class="flabel">사내 IP만 접근 허용 <span class="hint">선택</span></label><div style="display:flex;align-items:center;gap:10px"><span class="miniswitch off"></span><input class="inp" placeholder="예: 211.xxx.xxx.0/24" style="flex:1"></div></div>
+                    <div class="field"><label class="flabel">사내 IP만 접근 허용 <span class="hint">선택</span></label><div style="display:flex;align-items:center;gap:10px"><span class="miniswitch"></span><input class="inp" value="211.245.100.0/24" style="flex:1"></div></div>
                     <div class="field" style="margin-bottom:0"><label class="flabel">파일 업로드 제한</label><div style="display:flex;gap:8px;flex-wrap:wrap"><span class="chip2">JPG · PNG · WebP · MP4</span><span class="chip2">이미지 ≤ 5MB</span><span class="chip2">영상 ≤ 30MB</span></div></div>
                   </div>
                 </div>
