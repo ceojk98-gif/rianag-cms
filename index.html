@@ -327,12 +327,15 @@ textarea.inp{resize:none;line-height:1.65}
     <div class="tab" data-sc="s5"><span class="n">05</span> What's on 목록</div>
     <div class="tab" data-sc="s6"><span class="n">06</span> What's on 등록/수정</div>
     <div class="tab" data-sc="s7"><span class="n">07</span> 문의 접수함</div>
-    <div class="tab" data-sc="s8"><span class="n">08</span> 문의 폼 설정</div>
-    <div class="tab" data-sc="s9"><span class="n">09</span> 채용 공고</div>
-    <div class="tab" data-sc="s10"><span class="n">10</span> 입사지원 접수함</div>
-    <div class="tab" data-sc="s11"><span class="n">11</span> 설정</div>
+    <div class="tab" data-sc="s8"><span class="n">08</span> 문의 상세</div>
+    <div class="tab" data-sc="s9"><span class="n">09</span> 문의 폼 설정</div>
+    <div class="tab" data-sc="s10"><span class="n">10</span> 채용 공고 목록</div>
+    <div class="tab" data-sc="s11"><span class="n">11</span> 채용 공고 등록/수정</div>
+    <div class="tab" data-sc="s12"><span class="n">12</span> 입사지원 접수함</div>
+    <div class="tab" data-sc="s13"><span class="n">13</span> 입사지원 상세</div>
+    <div class="tab" data-sc="s14"><span class="n">14</span> 설정</div>
   </div>
-  <span class="tabpos" id="tabPos">1 / 12</span>
+  <span class="tabpos" id="tabPos">1 / 15</span>
   <button class="navarrow" id="nextBtn" title="다음 화면 (→)">›</button>
 </div>
 
@@ -366,14 +369,14 @@ textarea.inp{resize:none;line-height:1.65}
             </div>
           </div>
           <div>
-            <div class="wf-h" style="margin-bottom:10px">화면 구성 (12) · 관리 대상 4영역</div>
+            <div class="wf-h" style="margin-bottom:10px">화면 구성 (15) · 관리 대상 4영역</div>
             <div class="blocklist">
               <div class="bl"><span class="bt">01</span> 로그인 · <span class="bt">02</span> 대시보드</div>
-              <div class="bl"><span class="bt">03·04</span> <b>프로젝트</b>(Works) — 목록 · 등록/수정(상세 이미지)</div>
-              <div class="bl"><span class="bt">05·06</span> <b>What's on</b>(인사이트) — 목록 · 글+이미지 에디터</div>
-              <div class="bl"><span class="bt">07·08</span> <b>문의</b>(Contact·의뢰) — 접수함 · 폼 설정</div>
-              <div class="bl"><span class="bt">09·10</span> <b>채용</b>(Join·입사) — 공고 관리 · 지원 접수함</div>
-              <div class="bl" style="border-bottom:none"><span class="bt">11</span> 설정 — 계정 · 사이트 정보 · 보안</div>
+              <div class="bl"><span class="bt">03·04</span> <b>Works</b>(프로젝트) — 목록 · 등록/수정</div>
+              <div class="bl"><span class="bt">05·06</span> <b>What's on</b>(인사이트) — 목록 · 등록/수정</div>
+              <div class="bl"><span class="bt">07·08·09</span> <b>Contact</b>(의뢰) — 접수함 · 상세 · 폼 설정</div>
+              <div class="bl"><span class="bt">10·11·12·13</span> <b>Join</b>(채용) — 공고 목록·등록/수정 · 지원 접수함·상세</div>
+              <div class="bl" style="border-bottom:none"><span class="bt">14</span> 설정 — 계정 · 사이트 정보 · 보안</div>
             </div>
             <div class="note" style="margin-top:12px;background:#fff4e5;border-color:#f3d9a8;color:#8a5a12;font-size:11.5px"><b>Contact vs Join 구분</b> — 문의(Contact)=“일을 맡기겠다”(project@), 채용(Join)=“입사하고 싶다”(recruit@). 수신 메일·화면 완전 분리.</div>
             <div class="wf-h" style="margin:18px 0 8px">데이터 흐름</div>
@@ -460,12 +463,12 @@ textarea.inp{resize:none;line-height:1.65}
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
-            <div class="adm-bar"><div><div class="crumb">홈 / <b>대시보드</b></div><div class="ttl">대시보드</div></div><div class="sp"></div><button class="wf-btn ghost">사이트 열기 ↗</button><button class="wf-btn">+ 새 프로젝트</button></div>
+            <div class="adm-bar"><div><div class="crumb">홈 / <b>대시보드</b></div><div class="ttl">대시보드</div></div><div class="sp"></div><button class="wf-btn ghost">사이트 열기 ↗</button><button class="wf-btn" data-go="s4">+ 새 프로젝트</button></div>
             <div class="adm-body">
               <div style="font-size:15px;font-weight:800;margin-bottom:2px">안녕하세요, 이준경님 👋</div>
               <div class="mini" style="margin-bottom:16px">4개 영역(프로젝트 · What's on · 문의 · 채용) 현황을 한눈에.</div>
@@ -474,7 +477,7 @@ textarea.inp{resize:none;line-height:1.65}
                 <div class="statcard" data-go="s3"><div class="k">▤ 프로젝트</div><div class="v">9<small> 건 · 노출 7</small></div></div>
                 <div class="statcard" data-go="s5"><div class="k">◪ What's on</div><div class="v">8<small> 건 · 게시 7</small></div></div>
                 <div class="statcard hl" data-go="s7"><div class="k">✉ 신규 문의</div><div class="v">3<small> 건</small></div></div>
-                <div class="statcard hl" data-go="s10"><div class="k">◈ 신규 지원</div><div class="v">4<small> 명</small></div></div>
+                <div class="statcard hl" data-go="s12"><div class="k">◈ 신규 지원</div><div class="v">4<small> 명</small></div></div>
               </div>
               <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:16px;align-items:start">
                 <div>
@@ -482,10 +485,10 @@ textarea.inp{resize:none;line-height:1.65}
                   <table class="dt">
                     <tbody>
                       <tr data-go="s7"><td style="width:34px;text-align:center">✉</td><td><div class="pj"><div><div class="tt">신규 문의 · (주)메가박스 김서연</div><div class="st">[프로젝트 의뢰] 모바일 예매 리뉴얼</div></div></div></td><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td class="mini" style="width:80px">방금</td></tr>
-                      <tr data-go="s10"><td style="text-align:center">◈</td><td><div class="pj"><div><div class="tt">신규 지원 · 한지민</div><div class="st">웹/모바일 기획자 · 경력 4년</div></div></div></td><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td class="mini">방금</td></tr>
+                      <tr data-go="s12"><td style="text-align:center">◈</td><td><div class="pj"><div><div class="tt">신규 지원 · 한지민</div><div class="st">웹/모바일 기획자 · 경력 4년</div></div></div></td><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td class="mini">방금</td></tr>
                       <tr data-go="s4"><td style="text-align:center">✎</td><td><div class="pj"><div><div class="tt">프로젝트 수정 · CGV ON MOBILE</div><div class="st">Go deep · Dive in · Watch on</div></div></div></td><td><span class="badge vis"><span class="b"></span> 노출중</span></td><td class="mini">오늘 14:20</td></tr>
                       <tr data-go="s5"><td style="text-align:center">◪</td><td><div class="pj"><div><div class="tt">인사이트 게시 · 팻 매스니 공연 후기</div><div class="st">공연 · #PatMetheny</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시</span></td><td class="mini">어제</td></tr>
-                      <tr data-go="s10"><td style="text-align:center">◈</td><td><div class="pj"><div><div class="tt">신규 지원 · 오세훈</div><div class="st">디자이너(팀원) · 경력 2년</div></div></div></td><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td class="mini">2시간</td></tr>
+                      <tr data-go="s12"><td style="text-align:center">◈</td><td><div class="pj"><div><div class="tt">신규 지원 · 오세훈</div><div class="st">디자이너(팀원) · 경력 2년</div></div></div></td><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td class="mini">2시간</td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -495,8 +498,8 @@ textarea.inp{resize:none;line-height:1.65}
                     <button class="wf-btn" data-go="s4" style="justify-content:flex-start">＋ 새 프로젝트 등록</button>
                     <button class="wf-btn ghost" data-go="s6" style="justify-content:flex-start">＋ 새 인사이트(What's on)</button>
                     <button class="wf-btn ghost" data-go="s7" style="justify-content:space-between">✉ 문의 접수함 <span class="badge b-new">3</span></button>
-                    <button class="wf-btn ghost" data-go="s10" style="justify-content:space-between">◈ 입사지원 접수함 <span class="badge b-new">4</span></button>
-                    <button class="wf-btn ghost" data-go="s11" style="justify-content:flex-start">⚙ 설정</button>
+                    <button class="wf-btn ghost" data-go="s12" style="justify-content:space-between">◈ 입사지원 접수함 <span class="badge b-new">4</span></button>
+                    <button class="wf-btn ghost" data-go="s14" style="justify-content:flex-start">⚙ 설정</button>
                     <div class="linkrow" style="margin-top:4px"><div><div style="font-size:11.5px;font-weight:700">저장소 사용량</div><div class="mini">이미지·영상 42개 · 68MB</div></div></div>
                   </div>
                 </div>
@@ -529,8 +532,8 @@ textarea.inp{resize:none;line-height:1.65}
             <div class="adm-nav on" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
@@ -548,21 +551,21 @@ textarea.inp{resize:none;line-height:1.65}
                 <div class="adm-search" style="width:210px"><span>⌕</span> 제목·산업 검색</div>
                 <span class="chip2">산업: 전체 ▾</span><span class="chip2">노출: 전체 ▾</span><span class="chip2">정렬: 수동(드래그) ▾</span>
                 <div class="sp" style="flex:1"></div>
-                <button class="wf-btn">+ 새 프로젝트</button>
+                <button class="wf-btn" data-go="s4">+ 새 프로젝트</button>
               </div>
               <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">3</span>프로젝트 목록 · 총 9건 <span class="mini" style="font-weight:500;margin-left:8px">⋮⋮ 드래그로 노출 순서 변경</span></div>
               <table class="dt">
                 <thead><tr><th style="width:26px"></th><th style="width:56px">노출</th><th style="width:56px">썸네일</th><th>제목 / 서브타이틀</th><th style="width:130px">산업</th><th style="width:150px">유형</th><th style="width:130px">날짜</th><th style="width:96px">관리</th></tr></thead>
                 <tbody>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#1d1617"></span></td><td><div class="pj"><div><div class="tt">Go deep · Dive in · Watch on</div><div class="st">CGV ON MOBILE</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">July, 2025</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#ea1236"></span></td><td><div class="pj"><div><div class="tt">Trendy · Personalized · Visual · <span class="dq" title="원본 오타 — CMS에서 수정 가능">Catregorizing</span></div><div class="st">LOTTE DUTY FREE</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">2019 - In <span class="dq" title="원본 오타(Preogress) — CMS에서 수정 가능">Preogress</span></td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch off"></span></td><td><span class="thumb" style="background:#8ddfaf"></span></td><td><div class="pj"><div><div class="tt">Enjoy · A new · Happiness</div><div class="st">HOME&amp;SHOPPING</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">2021 - In Progress</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#a5bfe1"></span></td><td><div class="pj"><div><div class="tt">Simple · &amp; Easy · Consulting</div><div class="st">KB Kookmin Card TABLET</div></div></div></td><td><span class="chip2">Finance</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Tablet Web & App">Tablet Web/App</span></td><td class="mini">September, 2022</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#253146"><span class="vtag">▶</span></span></td><td><div class="pj"><div><div class="tt">Concise · Approach · For customer</div><div class="st">HYUNDAI <span class="dq" title="원본 공백 오타(DUTY F REE)">DUTY F REE</span></div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2">영상(MP4)</span></td><td class="mini">2021 - In Progress</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#1d251c"></span></td><td><div class="pj"><div><div class="tt">Find style · Share · The space</div><div class="st">HYUNDAI LIVART</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">January, 2021</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#215ec3"></span></td><td><div class="pj"><div><div class="tt">Convenient · Indexing · For developers</div><div class="st">SKT <span class="dq" title="원본 공백 오타(T ID ADMIN)">T ID ADMIN</span></div></div></div></td><td><span class="chip2">Telecom</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web/ Admin">Mobile · PC · Admin</span></td><td class="mini">September, 2021</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch off"></span></td><td><span class="thumb" style="background:#5fbf8c"></span></td><td><div class="pj"><div><div class="tt">Brand with · Visual · Emphasis</div><div class="st">CJ SEAFOOD</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">December, 2022</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#089bd0"></span></td><td><div class="pj"><div><div class="tt">Touch · Optimized · Tablet UI</div><div class="st">WOORI BANK TABLET BRUNCH</div></div></div></td><td><span class="chip2">Finance</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/Tablet">Mobile · Tablet</span></td><td class="mini">March, 2020</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#1d1617"></span></td><td><div class="pj"><div><div class="tt">Go deep · Dive in · Watch on</div><div class="st">CGV ON MOBILE</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">July, 2025</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#ea1236"></span></td><td><div class="pj"><div><div class="tt">Trendy · Personalized · Visual · <span class="dq" title="원본 오타 — CMS에서 수정 가능">Catregorizing</span></div><div class="st">LOTTE DUTY FREE</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">2019 - In <span class="dq" title="원본 오타(Preogress) — CMS에서 수정 가능">Preogress</span></td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch off"></span></td><td><span class="thumb" style="background:#8ddfaf"></span></td><td><div class="pj"><div><div class="tt">Enjoy · A new · Happiness</div><div class="st">HOME&amp;SHOPPING</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">2021 - In Progress</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#a5bfe1"></span></td><td><div class="pj"><div><div class="tt">Simple · &amp; Easy · Consulting</div><div class="st">KB Kookmin Card TABLET</div></div></div></td><td><span class="chip2">Finance</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Tablet Web & App">Tablet Web/App</span></td><td class="mini">September, 2022</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#253146"><span class="vtag">▶</span></span></td><td><div class="pj"><div><div class="tt">Concise · Approach · For customer</div><div class="st">HYUNDAI <span class="dq" title="원본 공백 오타(DUTY F REE)">DUTY F REE</span></div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2">영상(MP4)</span></td><td class="mini">2021 - In Progress</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#1d251c"></span></td><td><div class="pj"><div><div class="tt">Find style · Share · The space</div><div class="st">HYUNDAI LIVART</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">January, 2021</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#215ec3"></span></td><td><div class="pj"><div><div class="tt">Convenient · Indexing · For developers</div><div class="st">SKT <span class="dq" title="원본 공백 오타(T ID ADMIN)">T ID ADMIN</span></div></div></div></td><td><span class="chip2">Telecom</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web/ Admin">Mobile · PC · Admin</span></td><td class="mini">September, 2021</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch off"></span></td><td><span class="thumb" style="background:#5fbf8c"></span></td><td><div class="pj"><div><div class="tt">Brand with · Visual · Emphasis</div><div class="st">CJ SEAFOOD</div></div></div></td><td><span class="chip2">Commerce</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/PC Web">Mobile · PC Web</span></td><td class="mini">December, 2022</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s4"><td class="grip">⋮⋮</td><td><span class="miniswitch"></span></td><td><span class="thumb" style="background:#089bd0"></span></td><td><div class="pj"><div><div class="tt">Touch · Optimized · Tablet UI</div><div class="st">WOORI BANK TABLET BRUNCH</div></div></div></td><td><span class="chip2">Finance</span></td><td><span class="chip2" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;display:inline-block" title="UI/UX Design/Mobile Web&App/Tablet">Mobile · Tablet</span></td><td class="mini">March, 2020</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
                 </tbody>
               </table>
             </div>
@@ -593,8 +596,8 @@ textarea.inp{resize:none;line-height:1.65}
             <div class="adm-nav on" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
@@ -693,12 +696,12 @@ Watch on</textarea>
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav on" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
-            <div class="adm-bar"><div><div class="crumb">홈 / <b>What's on</b></div><div class="ttl">What's on (인사이트) 관리</div></div><div class="sp"></div><div class="adm-search"><span>⌕</span> 제목·태그 검색</div><button class="wf-btn">+ 새 글</button></div>
+            <div class="adm-bar"><div><div class="crumb">홈 / <b>What's on</b></div><div class="ttl">What's on (인사이트) 관리</div></div><div class="sp"></div><div class="adm-search"><span>⌕</span> 제목·태그 검색</div><button class="wf-btn" data-go="s6">+ 새 글</button></div>
             <div class="adm-body">
               <div style="display:flex;align-items:center;gap:10px;margin:0 0 12px">
                 <span class="nchip">1</span>
@@ -710,14 +713,14 @@ Watch on</textarea>
               <table class="dt">
                 <thead><tr><th style="width:26px"></th><th style="width:56px">썸네일</th><th style="width:80px">카테고리</th><th>요약 / 태그</th><th style="width:90px">상태</th><th style="width:110px">날짜</th><th style="width:96px">관리</th></tr></thead>
                 <tbody>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#26324a"></span></td><td><span class="chip2">도서</span></td><td><div class="pj"><div><div class="tt">사이먼 사이넥 ‘Start with Why’ — 좋은 목표란 무엇인가</div><div class="st">#StartWithWhy · #우리는왜일을하는가</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.06.20</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#1f5c4d"></span></td><td><span class="chip2">트렌드</span></td><td><div class="pj"><div><div class="tt">ChatGPT 등장 이후, 개인화와 검색은 어떻게 바뀌나</div><div class="st">#AISEARCH · #똑똑해진검색서비스</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.05.28</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#3a2b55"></span></td><td><span class="chip2">공연</span></td><td><div class="pj"><div><div class="tt">‘무정부 요정’ 콜드플레이 내한 공연 리뷰</div><div class="st">#COLDPLAY · #사운드와비주얼그리고스토리</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.05.10</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#2e4a2e"></span></td><td><span class="chip2">일상</span></td><td><div class="pj"><div><div class="tt">회사 뒤편 증미산, 그리고 한강 산책</div><div class="st">#등산아니고_산책 · #피톤치드</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.04.22</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#4a3a2b"></span></td><td><span class="chip2">공연</span></td><td><div class="pj"><div><div class="tt">9년 만의 내한, 팻 매스니 공연 후기</div><div class="st">#PatMetheny · #또오세요 · #건강히</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.05.26</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#274355"></span></td><td><span class="chip2">일상</span></td><td><div class="pj"><div><div class="tt">염강나들목 터널을 지나면 만나는 한강뷰</div><div class="st">#Real한강뷰 · #힐링타임 · #커피타임</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.04.05</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#2b3a4a"></span></td><td><span class="chip2">디자인</span></td><td><div class="pj"><div><div class="tt">AI 시대, 진화하는 디자이너의 역할</div><div class="st">#AI시대 · #진화하는디자이너의역할</div></div></div></td><td><span class="badge b-close"><span class="b"></span> 임시저장</span></td><td class="mini">2025.06.30</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
-                  <tr><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#55324a"></span></td><td><span class="chip2">웹툰</span></td><td><div class="pj"><div><div class="tt">리앙에이지가 만드는 웹툰, ‘향단뎐’</div><div class="st">#리앙에이지가만드는웹툰 · #향단뎐</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.03.18</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#26324a"></span></td><td><span class="chip2">도서</span></td><td><div class="pj"><div><div class="tt">사이먼 사이넥 ‘Start with Why’ — 좋은 목표란 무엇인가</div><div class="st">#StartWithWhy · #우리는왜일을하는가</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.06.20</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#1f5c4d"></span></td><td><span class="chip2">트렌드</span></td><td><div class="pj"><div><div class="tt">ChatGPT 등장 이후, 개인화와 검색은 어떻게 바뀌나</div><div class="st">#AISEARCH · #똑똑해진검색서비스</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.05.28</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#3a2b55"></span></td><td><span class="chip2">공연</span></td><td><div class="pj"><div><div class="tt">‘무정부 요정’ 콜드플레이 내한 공연 리뷰</div><div class="st">#COLDPLAY · #사운드와비주얼그리고스토리</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.05.10</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#2e4a2e"></span></td><td><span class="chip2">일상</span></td><td><div class="pj"><div><div class="tt">회사 뒤편 증미산, 그리고 한강 산책</div><div class="st">#등산아니고_산책 · #피톤치드</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.04.22</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#4a3a2b"></span></td><td><span class="chip2">공연</span></td><td><div class="pj"><div><div class="tt">9년 만의 내한, 팻 매스니 공연 후기</div><div class="st">#PatMetheny · #또오세요 · #건강히</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.05.26</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#274355"></span></td><td><span class="chip2">일상</span></td><td><div class="pj"><div><div class="tt">염강나들목 터널을 지나면 만나는 한강뷰</div><div class="st">#Real한강뷰 · #힐링타임 · #커피타임</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.04.05</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#2b3a4a"></span></td><td><span class="chip2">디자인</span></td><td><div class="pj"><div><div class="tt">AI 시대, 진화하는 디자이너의 역할</div><div class="st">#AI시대 · #진화하는디자이너의역할</div></div></div></td><td><span class="badge b-close"><span class="b"></span> 임시저장</span></td><td class="mini">2025.06.30</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
+                  <tr data-go="s6"><td class="grip">⋮⋮</td><td><span class="thumb" style="background:#55324a"></span></td><td><span class="chip2">웹툰</span></td><td><div class="pj"><div><div class="tt">리앙에이지가 만드는 웹툰, ‘향단뎐’</div><div class="st">#리앙에이지가만드는웹툰 · #향단뎐</div></div></div></td><td><span class="badge b-done"><span class="b"></span> 게시중</span></td><td class="mini">2025.03.18</td><td><button class="iconbtn" title="수정">✎</button> <button class="iconbtn dg" title="삭제">🗑</button></td></tr>
                 </tbody>
               </table>
             </div>
@@ -747,8 +750,8 @@ Watch on</textarea>
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav on" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
@@ -792,10 +795,10 @@ Watch on</textarea>
       </div>
     </section>
 
-    <!-- S7 문의 접수함 -->
+    <!-- S7 문의 접수함 (목록) -->
     <section class="screen" id="s7">
       <div class="sc-head"><span class="sc-id">CMS-07</span><span class="sc-title">문의(Contact) 접수함</span><span class="fe-flag">🖥 프론트(사이트) 신규 폼 필요</span></div>
-      <div class="sc-path">경로 <b>/admin/contacts</b> · 사이트 Contact 폼으로 들어온 <b>프로젝트·견적 의뢰</b> · 수신 project@rianag.com</div>
+      <div class="sc-path">경로 <b>/admin/contacts</b> · 사이트 Contact 폼으로 들어온 <b>프로젝트·견적 의뢰</b> 목록 · 수신 project@rianag.com</div>
       <div class="frame">
         <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/contacts</span></div>
         <div class="adm">
@@ -806,48 +809,76 @@ Watch on</textarea>
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav on" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
-            <div class="adm-bar"><div><div class="crumb">홈 / <b>문의</b></div><div class="ttl">문의 접수함 <span class="badge b-new" style="margin-left:6px">신규 3</span></div></div><div class="sp"></div><span class="chip2">상태: 전체 ▾</span><button class="wf-btn ghost">폼 설정</button></div>
+            <div class="adm-bar"><div><div class="crumb">홈 / <b>문의</b></div><div class="ttl">문의 접수함 <span class="badge b-new" style="margin-left:6px">신규 3</span></div></div><div class="sp"></div><span class="chip2">상태: 전체 ▾</span><button class="wf-btn ghost" data-go="s9">폼 설정</button></div>
             <div class="adm-body">
-              <div class="inbox">
-                <div>
-                  <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">1</span>접수 목록</div>
-                  <div class="inbox-list">
-                    <div class="ih">전체 12건 · 신규 3</div>
-                    <div class="inbox-row on"><span class="dot"></span><div style="min-width:0"><div class="nm">(주)메가박스 · 김서연</div><div class="pv">[프로젝트 의뢰] 모바일 예매 리뉴얼 문의드립니다</div></div><span class="tm">방금</span></div>
-                    <div class="inbox-row"><span class="dot"></span><div style="min-width:0"><div class="nm">스타일쉐어 · 박준호</div><div class="pv">[견적] 커머스 앱 UX 개선 견적 요청</div></div><span class="tm">1시간</span></div>
-                    <div class="inbox-row"><span class="dot"></span><div style="min-width:0"><div class="nm">현대百 · 이지훈</div><div class="pv">[제휴] 뉴미디어 콘텐츠 협업 제안</div></div><span class="tm">3시간</span></div>
-                    <div class="inbox-row"><span class="dot read"></span><div style="min-width:0"><div class="nm">우아한형제들 · 최민아</div><div class="pv">[프로젝트 의뢰] 배너 시스템 구축</div></div><span class="tm">어제</span></div>
-                    <div class="inbox-row"><span class="dot read"></span><div style="min-width:0"><div class="nm">개인 · 정우성</div><div class="pv">[기타] 포트폴리오 관련 문의</div></div><span class="tm">2일</span></div>
-                  </div>
+              <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">1</span>접수 목록 · 총 12건 <span class="mini" style="font-weight:500;margin-left:8px">행 클릭 → 문의 상세(CMS-08)</span></div>
+              <table class="dt">
+                <thead><tr><th style="width:84px">상태</th><th style="width:200px">회사 / 이름</th><th style="width:100px">문의 유형</th><th>내용</th><th style="width:110px">접수일</th><th style="width:70px">관리</th></tr></thead>
+                <tbody>
+                  <tr data-go="s8"><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td><div class="pj"><div><div class="tt">(주)메가박스</div><div class="st">김서연</div></div></div></td><td><span class="chip2">프로젝트 의뢰</span></td><td class="mini">모바일 예매 리뉴얼 문의드립니다</td><td class="mini">방금</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s8"><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td><div class="pj"><div><div class="tt">스타일쉐어</div><div class="st">박준호</div></div></div></td><td><span class="chip2">견적</span></td><td class="mini">커머스 앱 UX 개선 견적 요청</td><td class="mini">1시간 전</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s8"><td><span class="badge b-new"><span class="b"></span> 신규</span></td><td><div class="pj"><div><div class="tt">현대百</div><div class="st">이지훈</div></div></div></td><td><span class="chip2">제휴</span></td><td class="mini">뉴미디어 콘텐츠 협업 제안</td><td class="mini">3시간 전</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s8"><td><span class="badge b-doing"><span class="b"></span> 확인</span></td><td><div class="pj"><div><div class="tt">우아한형제들</div><div class="st">최민아</div></div></div></td><td><span class="chip2">프로젝트 의뢰</span></td><td class="mini">배너 시스템 구축</td><td class="mini">어제</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s8"><td><span class="badge b-done"><span class="b"></span> 완료</span></td><td><div class="pj"><div><div class="tt">개인</div><div class="st">정우성</div></div></div></td><td><span class="chip2">기타</span></td><td class="mini">포트폴리오 관련 문의</td><td class="mini">2일 전</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desc"><h4>화면 구성</h4>
+        <table>
+          <tr><th class="no">No</th><th class="area">영역</th><th>기능 및 설명</th><th class="rmk">비고</th></tr>
+          <tr><td class="no">1</td><td class="area">접수 목록</td><td>사이트 Contact 폼 접수 목록. 상태(신규/확인/완료)·회사·이름·문의유형·내용·접수일. 상태 필터. 행/[↗] 클릭 → 문의 상세.</td><td class="rmk">project@ 수신</td></tr>
+        </table>
+      </div>
+      <div class="note"><b>Contact = 의뢰</b> — "당신에게 일을 맡기겠다"(프로젝트·견적·제휴). 입사지원은 별도 <b>Join Our Team</b>에서 관리하며 수신 메일도 recruit@ 로 분리됩니다.</div>
+      <div class="note fe">🖥 <b>프론트(사이트) 작업 필요</b> — 현재 <code>contact.html</code>은 <b>폼 없이 연락처·이메일 안내</b>만 있습니다. 이 접수함이 동작하려면 사이트에 문의 폼을 신규 제작하고 서버 저장(PHP)에 연결해야 합니다. 폼 항목 설계는 CMS-09.</div>
+    </section>
+
+    <!-- S8 문의 상세 -->
+    <section class="screen" id="s8">
+      <div class="sc-head"><span class="sc-id">CMS-08</span><span class="sc-title">문의 상세</span></div>
+      <div class="sc-path">경로 <b>/admin/contacts/view</b> · 접수된 문의 한 건 상세 · 처리 상태 관리</div>
+      <div class="frame">
+        <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/contacts/view?id=1</span></div>
+        <div class="adm">
+          <div class="adm-side">
+            <div class="adm-brand"><div class="lg">R</div><div><b>RIANAG CMS</b><em>Works 관리</em></div></div>
+            <div class="adm-cap">MENU</div>
+            <div class="adm-nav" data-go="s2"><span class="i">▧</span> 대시보드</div>
+            <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
+            <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
+            <div class="adm-nav on" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
+            <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
+          </div>
+          <div class="adm-main">
+            <div class="adm-bar"><div><div class="crumb">홈 / 문의 / <b>상세</b></div><div class="ttl">문의 상세</div></div><div class="sp"></div><button class="wf-btn ghost" data-go="s7">← 목록</button><button class="wf-btn ghost">답장(메일)</button><button class="wf-btn">저장</button></div>
+            <div class="adm-body">
+              <div class="card" style="max-width:760px">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                  <div><div style="font-size:15px;font-weight:800">모바일 예매 리뉴얼 문의드립니다</div><div class="mini">접수 2026-07-13 14:20 · <span class="chip2">프로젝트 의뢰</span></div></div>
+                  <span class="badge b-new"><span class="b"></span> 신규</span>
                 </div>
-                <div>
-                  <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">2</span>문의 상세</div>
-                  <div class="inbox-detail">
-                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-                      <div><div style="font-size:14px;font-weight:800">모바일 예매 리뉴얼 문의드립니다</div><div class="mini">접수 2026-07-13 14:20 · <span class="chip2">프로젝트 의뢰</span></div></div>
-                      <span class="badge b-new"><span class="b"></span> 신규</span>
-                    </div>
-                    <div class="kv"><div class="k">이름</div><div class="v">김서연</div></div>
-                    <div class="kv"><div class="k">회사/브랜드</div><div class="v">(주)메가박스</div></div>
-                    <div class="kv"><div class="k">연락처</div><div class="v">010-1234-5678</div></div>
-                    <div class="kv"><div class="k">이메일</div><div class="v">seoyeon.kim@megabox.co.kr</div></div>
-                    <div class="kv"><div class="k">문의 유형</div><div class="v">프로젝트 의뢰</div></div>
-                    <div class="kv"><div class="k">내용</div><div class="v">기존 모바일 예매 플로우를 전면 리뉴얼하려 합니다. UX 진단부터 디자인·퍼블까지 범위 협의 가능할까요? 일정은 Q3 목표입니다.</div></div>
-                    <div class="kv"><div class="k">첨부</div><div class="v"><span class="filechip">📎 RFP_메가박스_예매리뉴얼.pdf · 1.8MB</span></div></div>
-                    <div style="display:flex;align-items:center;gap:8px;margin-top:16px">
-                      <span class="flabel" style="margin:0">처리 상태</span>
-                      <span class="seg"><span class="on">신규</span><span>확인</span><span>완료</span></span>
-                      <div class="sp" style="flex:1"></div>
-                      <button class="wf-btn ghost">답장(메일)</button><button class="wf-btn">저장</button>
-                    </div>
-                    <div class="field" style="margin-top:12px"><label class="flabel">내부 메모</label><textarea class="inp" rows="2" readonly>1차 미팅 일정 조율 중 · 담당 김대리 배정 · 예산 규모/기간 확인 필요</textarea></div>
-                  </div>
+                <div class="kv"><div class="k">이름</div><div class="v">김서연</div></div>
+                <div class="kv"><div class="k">회사/브랜드</div><div class="v">(주)메가박스</div></div>
+                <div class="kv"><div class="k">연락처</div><div class="v">010-1234-5678</div></div>
+                <div class="kv"><div class="k">이메일</div><div class="v">seoyeon.kim@megabox.co.kr</div></div>
+                <div class="kv"><div class="k">문의 유형</div><div class="v">프로젝트 의뢰</div></div>
+                <div class="kv"><div class="k">내용</div><div class="v">기존 모바일 예매 플로우를 전면 리뉴얼하려 합니다. UX 진단부터 디자인·퍼블까지 범위 협의 가능할까요? 일정은 Q3 목표입니다.</div></div>
+                <div class="kv"><div class="k">첨부</div><div class="v"><span class="filechip">📎 RFP_메가박스_예매리뉴얼.pdf · 1.8MB</span></div></div>
+                <div style="display:flex;align-items:center;gap:8px;margin-top:18px">
+                  <span class="flabel" style="margin:0">처리 상태</span>
+                  <span class="seg"><span class="on">신규</span><span>확인</span><span>완료</span></span>
                 </div>
+                <div class="field" style="margin-top:14px;margin-bottom:0"><label class="flabel">내부 메모 <span class="hint">관리자만 표시</span></label><textarea class="inp" rows="2" readonly>1차 미팅 일정 조율 중 · 담당 김대리 배정 · 예산 규모/기간 확인 필요</textarea></div>
               </div>
             </div>
           </div>
@@ -856,17 +887,15 @@ Watch on</textarea>
       <div class="desc"><h4>화면 구성</h4>
         <table>
           <tr><th class="no">No</th><th class="area">영역</th><th>기능 및 설명</th><th class="rmk">비고</th></tr>
-          <tr><td class="no">1</td><td class="area">접수 목록</td><td>사이트 Contact 폼 접수 목록(신규=파란점). 회사·이름·문의유형·시간. 상태 필터.</td><td class="rmk">project@ 수신</td></tr>
-          <tr><td class="no">2</td><td class="area">문의 상세</td><td>신청자 정보·문의유형·내용·<b>첨부파일</b> 확인. 처리상태(신규→확인→완료), 메일 답장, 내부 메모.</td><td class="rmk">의뢰 전용</td></tr>
+          <tr><td class="no">1</td><td class="area">신청자 정보</td><td>이름·회사·연락처·이메일·문의유형·내용·<b>첨부파일</b> 확인.</td><td class="rmk">읽기</td></tr>
+          <tr><td class="no">2</td><td class="area">처리</td><td>처리상태(신규→확인→완료) 변경, 메일 답장, 내부 메모 기록.</td><td class="rmk">-</td></tr>
         </table>
       </div>
-      <div class="note"><b>Contact = 의뢰</b> — "당신에게 일을 맡기겠다"(프로젝트·견적·제휴). 입사지원은 별도 <b>채용(Join)</b>에서 관리하며 수신 메일도 recruit@ 로 분리됩니다.</div>
-      <div class="note fe">🖥 <b>프론트(사이트) 작업 필요</b> — 현재 <code>contact.html</code>은 <b>폼 없이 연락처·이메일 안내</b>만 있습니다. 이 접수함이 동작하려면 <b>사이트에 문의 폼(이름·회사·연락처·이메일·문의유형·내용·첨부)을 신규 제작</b>하고 서버 저장(PHP)에 연결해야 합니다. 폼 항목 설계는 CMS-08.</div>
     </section>
 
-    <!-- S8 문의 폼 설정 -->
-    <section class="screen" id="s8">
-      <div class="sc-head"><span class="sc-id">CMS-08</span><span class="sc-title">문의 폼 설정</span><span class="fe-flag">🖥 프론트(사이트) 신규 폼 필요</span></div>
+    <!-- S9 문의 폼 설정 -->
+    <section class="screen" id="s9">
+      <div class="sc-head"><span class="sc-id">CMS-09</span><span class="sc-title">문의 폼 설정</span><span class="fe-flag">🖥 프론트(사이트) 신규 폼 필요</span></div>
       <div class="sc-path">경로 <b>/admin/contacts/form</b> · 사이트 Contact 폼의 입력 항목·수신 설정 관리</div>
       <div class="frame">
         <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/contacts/form</span></div>
@@ -878,12 +907,12 @@ Watch on</textarea>
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav on" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
-            <div class="adm-bar"><div><div class="crumb">홈 / 문의 / <b>폼 설정</b></div><div class="ttl">Contact 폼 설정</div></div><div class="sp"></div><button class="wf-btn">저장</button></div>
+            <div class="adm-bar"><div><div class="crumb">홈 / 문의 / <b>폼 설정</b></div><div class="ttl">Contact 폼 설정</div></div><div class="sp"></div><button class="wf-btn ghost" data-go="s7">← 접수함</button><button class="wf-btn">저장</button></div>
             <div class="adm-body">
               <div class="formgrid">
                 <div>
@@ -936,10 +965,10 @@ Watch on</textarea>
       <div class="note fe">🖥 <b>프론트(사이트) 작업 필요</b> — 이 항목들이 실제로 노출되려면 <code>contact.html</code>에 <b>문의 폼을 신규 제작</b>해야 합니다(우측 미리보기가 목표 형태). 현행은 이메일 안내만 있음.</div>
     </section>
 
-    <!-- S9 채용 공고 관리 -->
-    <section class="screen" id="s9">
-      <div class="sc-head"><span class="sc-id">CMS-09</span><span class="sc-title">채용 공고 관리</span></div>
-      <div class="sc-path">경로 <b>/admin/careers</b> · Join Our Team의 모집 직군(공고) 등록·수정·마감</div>
+    <!-- S10 채용 공고 목록 -->
+    <section class="screen" id="s10">
+      <div class="sc-head"><span class="sc-id">CMS-10</span><span class="sc-title">채용 공고 목록</span></div>
+      <div class="sc-path">경로 <b>/admin/careers</b> · Join Our Team의 모집 직군(공고) 목록 · join.html Position 영역</div>
       <div class="frame">
         <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/careers</span></div>
         <div class="adm">
@@ -950,50 +979,24 @@ Watch on</textarea>
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav on" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav on" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
-            <div class="adm-bar"><div><div class="crumb">홈 / 채용 / <b>공고</b></div><div class="ttl">채용 공고 관리</div></div><div class="sp"></div><button class="wf-btn ghost">지원 접수함 →</button><button class="wf-btn">+ 새 공고</button></div>
+            <div class="adm-bar"><div><div class="crumb">홈 / 채용 / <b>공고</b></div><div class="ttl">채용 공고 목록</div></div><div class="sp"></div><button class="wf-btn ghost" data-go="s12">지원 접수함 →</button><button class="wf-btn" data-go="s11">+ 새 공고</button></div>
             <div class="adm-body">
-              <div class="inbox">
-                <div>
-                  <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">1</span>모집 직군</div>
-                  <div class="inbox-list">
-                    <div class="ih">모집중 5</div>
-                    <div class="inbox-row on"><div style="min-width:0"><div class="nm">PM/PL(팀장급) 기획자</div><div class="pv">기획 · 팀장급 · 00명</div></div><span class="badge b-done" style="margin-left:auto"><span class="b"></span> 모집중</span></div>
-                    <div class="inbox-row"><div style="min-width:0"><div class="nm">웹/모바일 기획자 (팀원)</div><div class="pv">기획 · 경력 · 00명</div></div><span class="badge b-done" style="margin-left:auto"><span class="b"></span> 모집중</span></div>
-                    <div class="inbox-row"><div style="min-width:0"><div class="nm">PM/PL(팀장급) 디자이너</div><div class="pv">디자인 · 팀장급 · 00명</div></div><span class="badge b-done" style="margin-left:auto"><span class="b"></span> 모집중</span></div>
-                    <div class="inbox-row"><div style="min-width:0"><div class="nm">디자이너 (팀원)</div><div class="pv">디자인 · 경력 · 00명</div></div><span class="badge b-done" style="margin-left:auto"><span class="b"></span> 모집중</span></div>
-                    <div class="inbox-row"><div style="min-width:0"><div class="nm">퍼블리셔 (경력 3년↑)</div><div class="pv">퍼블리싱 · 경력 · 00명</div></div><span class="badge b-done" style="margin-left:auto"><span class="b"></span> 모집중</span></div>
-                  </div>
-                </div>
-                <div>
-                  <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">2</span>공고 편집</div>
-                  <div class="inbox-detail">
-                    <div class="frow" style="margin-bottom:13px">
-                      <div class="field" style="margin-bottom:0;flex:2"><label class="flabel">직군명 <span class="req">*</span></label><input class="inp" value="PM/PL(팀장급) 기획자"></div>
-                      <div class="field" style="margin-bottom:0"><label class="flabel">부서</label><input class="inp" value="기획"></div>
-                    </div>
-                    <div class="frow" style="margin-bottom:13px">
-                      <div class="field" style="margin-bottom:0"><label class="flabel">경력</label><input class="inp" value="팀장급"></div>
-                      <div class="field" style="margin-bottom:0"><label class="flabel">모집 인원</label><input class="inp" value="00명"></div>
-                      <div class="field" style="margin-bottom:0"><label class="flabel">학력</label><input class="inp" value="학력무관"></div>
-                    </div>
-                    <div class="field"><label class="flabel">자격 요건 / 우대사항</label><textarea class="inp" rows="4" readonly>· 이커머스/뉴미디어 UX 기획 경력
-· 프로젝트 리딩(PM/PL) 경험
-· 애자일 협업 경험 우대
-· 포트폴리오 필수 제출</textarea></div>
-                    <div style="display:flex;align-items:center;gap:8px;margin-top:4px">
-                      <span class="flabel" style="margin:0">상태</span>
-                      <span class="seg"><span class="on">모집중</span><span>마감</span></span>
-                      <div class="sp" style="flex:1"></div>
-                      <button class="wf-btn danger">삭제</button><button class="wf-btn">저장</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">1</span>모집 직군 · 모집중 5 <span class="mini" style="font-weight:500;margin-left:8px">행 클릭 → 공고 등록/수정(CMS-11)</span></div>
+              <table class="dt">
+                <thead><tr><th style="width:26px"></th><th>직군명</th><th style="width:110px">부서</th><th style="width:120px">경력</th><th style="width:90px">모집인원</th><th style="width:90px">상태</th><th style="width:70px">관리</th></tr></thead>
+                <tbody>
+                  <tr data-go="s11"><td class="grip">⋮⋮</td><td><div class="pj"><div class="tt">PM/PL(팀장급) 기획자</div></div></td><td class="mini">기획</td><td class="mini">팀장급</td><td class="mini">00명</td><td><span class="badge b-done"><span class="b"></span> 모집중</span></td><td><button class="iconbtn" title="수정">✎</button></td></tr>
+                  <tr data-go="s11"><td class="grip">⋮⋮</td><td><div class="pj"><div class="tt">웹/모바일 기획자 (팀원)</div></div></td><td class="mini">기획</td><td class="mini">경력</td><td class="mini">00명</td><td><span class="badge b-done"><span class="b"></span> 모집중</span></td><td><button class="iconbtn" title="수정">✎</button></td></tr>
+                  <tr data-go="s11"><td class="grip">⋮⋮</td><td><div class="pj"><div class="tt">PM/PL(팀장급) 디자이너</div></div></td><td class="mini">디자인</td><td class="mini">팀장급</td><td class="mini">00명</td><td><span class="badge b-done"><span class="b"></span> 모집중</span></td><td><button class="iconbtn" title="수정">✎</button></td></tr>
+                  <tr data-go="s11"><td class="grip">⋮⋮</td><td><div class="pj"><div class="tt">디자이너 (팀원)</div></div></td><td class="mini">디자인</td><td class="mini">경력</td><td class="mini">00명</td><td><span class="badge b-done"><span class="b"></span> 모집중</span></td><td><button class="iconbtn" title="수정">✎</button></td></tr>
+                  <tr data-go="s11"><td class="grip">⋮⋮</td><td><div class="pj"><div class="tt">퍼블리셔 (경력 3년↑)</div></div></td><td class="mini">퍼블리싱</td><td class="mini">경력</td><td class="mini">00명</td><td><span class="badge b-done"><span class="b"></span> 모집중</span></td><td><button class="iconbtn" title="수정">✎</button></td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -1001,16 +1004,66 @@ Watch on</textarea>
       <div class="desc"><h4>화면 구성</h4>
         <table>
           <tr><th class="no">No</th><th class="area">영역</th><th>기능 및 설명</th><th class="rmk">비고</th></tr>
-          <tr><td class="no">1</td><td class="area">모집 직군</td><td>현행 5개 직군(기획 2·디자인 2·퍼블 1). 모집중/마감 상태. [+ 새 공고].</td><td class="rmk">Position</td></tr>
-          <tr><td class="no">2</td><td class="area">공고 편집</td><td>직군명·부서·경력·모집인원·학력·자격요건·상태. Join 페이지 Position 영역에 반영.</td><td class="rmk">join.html</td></tr>
+          <tr><td class="no">1</td><td class="area">공고 목록</td><td>현행 5개 직군(기획 2·디자인 2·퍼블 1). 드래그 정렬 · 모집중/마감 상태. [+ 새 공고]/행 클릭 → 등록/수정(CMS-11). [지원 접수함] → CMS-12.</td><td class="rmk">Position</td></tr>
         </table>
       </div>
     </section>
 
-    <!-- S10 입사지원 접수함 -->
-    <section class="screen" id="s10">
-      <div class="sc-head"><span class="sc-id">CMS-10</span><span class="sc-title">입사지원 접수함</span><span class="fe-flag">🖥 프론트(사이트) 신규 폼 필요</span></div>
-      <div class="sc-path">경로 <b>/admin/careers/apply</b> · Join Our Team <b>입사지원</b> 접수 · 수신 recruit@rianag.com</div>
+    <!-- S11 채용 공고 등록/수정 -->
+    <section class="screen" id="s11">
+      <div class="sc-head"><span class="sc-id">CMS-11</span><span class="sc-title">채용 공고 등록 / 수정</span></div>
+      <div class="sc-path">경로 <b>/admin/careers/edit</b> · 모집 직군(공고) 신규 등록 또는 수정 · 마감 처리</div>
+      <div class="frame">
+        <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/careers/edit?id=1</span></div>
+        <div class="adm">
+          <div class="adm-side">
+            <div class="adm-brand"><div class="lg">R</div><div><b>RIANAG CMS</b><em>Works 관리</em></div></div>
+            <div class="adm-cap">MENU</div>
+            <div class="adm-nav" data-go="s2"><span class="i">▧</span> 대시보드</div>
+            <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
+            <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
+            <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
+            <div class="adm-nav on" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
+            <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
+          </div>
+          <div class="adm-main">
+            <div class="adm-bar"><div><div class="crumb">홈 / 채용 / 공고 / <b>수정</b></div><div class="ttl">채용 공고 수정</div></div><div class="sp"></div><button class="wf-btn ghost" data-go="s10">← 목록</button><span class="badge b-done"><span class="b"></span> 모집중</span></div>
+            <div class="adm-body">
+              <div class="card" style="max-width:760px">
+                <h5><span class="nchip">1</span>공고 정보</h5>
+                <div class="frow" style="margin-bottom:14px">
+                  <div class="field" style="margin-bottom:0;flex:2"><label class="flabel">직군명 <span class="req">*</span></label><input class="inp" value="PM/PL(팀장급) 기획자"></div>
+                  <div class="field" style="margin-bottom:0"><label class="flabel">부서</label><input class="inp" value="기획"></div>
+                </div>
+                <div class="frow" style="margin-bottom:14px">
+                  <div class="field" style="margin-bottom:0"><label class="flabel">경력</label><input class="inp" value="팀장급"></div>
+                  <div class="field" style="margin-bottom:0"><label class="flabel">모집 인원</label><input class="inp" value="00명"></div>
+                  <div class="field" style="margin-bottom:0"><label class="flabel">학력</label><input class="inp" value="학력무관"></div>
+                </div>
+                <div class="field"><label class="flabel">자격 요건 / 우대사항</label><textarea class="inp" rows="4" readonly>· 이커머스/뉴미디어 UX 기획 경력
+· 프로젝트 리딩(PM/PL) 경험
+· 애자일 협업 경험 우대
+· 포트폴리오 필수 제출</textarea></div>
+                <div class="field" style="margin-bottom:0"><label class="flabel">모집 상태</label><span class="seg"><span class="on">모집중</span><span>마감</span></span></div>
+              </div>
+              <div class="savebar"><div class="sp">저장 시 join.html Position 영역에 반영됩니다.</div><button class="wf-btn danger">삭제</button><button class="wf-btn ghost" data-go="s10">취소</button><button class="wf-btn">저장</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desc"><h4>화면 구성</h4>
+        <table>
+          <tr><th class="no">No</th><th class="area">영역</th><th>기능 및 설명</th><th class="rmk">비고</th></tr>
+          <tr><td class="no">1</td><td class="area">공고 정보</td><td>직군명·부서·경력·모집인원·학력·자격요건·모집상태. 신규 등록 시 빈 폼, 수정 시 기존 값. 저장 → Join 페이지 반영.</td><td class="rmk">join.html</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- S12 입사지원 접수함 (목록) -->
+    <section class="screen" id="s12">
+      <div class="sc-head"><span class="sc-id">CMS-12</span><span class="sc-title">입사지원 접수함</span><span class="fe-flag">🖥 프론트(사이트) 신규 폼 필요</span></div>
+      <div class="sc-path">경로 <b>/admin/careers/apply</b> · Join Our Team <b>입사지원</b> 접수 목록 · 수신 recruit@rianag.com</div>
       <div class="frame">
         <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/careers/apply</span></div>
         <div class="adm">
@@ -1021,47 +1074,75 @@ Watch on</textarea>
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav on" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav on" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
-            <div class="adm-bar"><div><div class="crumb">홈 / 채용 / <b>지원 접수</b></div><div class="ttl">입사지원 접수함 <span class="badge b-new" style="margin-left:6px">신규 4</span></div></div><div class="sp"></div><span class="chip2">직군: 전체 ▾</span><span class="chip2">전형: 전체 ▾</span></div>
+            <div class="adm-bar"><div><div class="crumb">홈 / 채용 / <b>지원 접수</b></div><div class="ttl">입사지원 접수함 <span class="badge b-new" style="margin-left:6px">신규 4</span></div></div><div class="sp"></div><span class="chip2">직군: 전체 ▾</span><span class="chip2">전형: 전체 ▾</span><button class="wf-btn ghost" data-go="s10">채용 공고 →</button></div>
             <div class="adm-body">
-              <div class="inbox">
-                <div>
-                  <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">1</span>지원자 목록</div>
-                  <div class="inbox-list">
-                    <div class="ih">전체 23명 · 신규 4</div>
-                    <div class="inbox-row on"><span class="dot"></span><div style="min-width:0"><div class="nm">한지민</div><div class="pv">웹/모바일 기획자 · 경력 4년</div></div><span class="tm">방금</span></div>
-                    <div class="inbox-row"><span class="dot"></span><div style="min-width:0"><div class="nm">오세훈</div><div class="pv">디자이너(팀원) · 경력 2년</div></div><span class="tm">2시간</span></div>
-                    <div class="inbox-row"><span class="dot"></span><div style="min-width:0"><div class="nm">김도현</div><div class="pv">퍼블리셔 · 경력 5년</div></div><span class="tm">5시간</span></div>
-                    <div class="inbox-row"><span class="dot read"></span><div style="min-width:0"><div class="nm">이수진</div><div class="pv">PM/PL 기획자 · 경력 8년</div></div><span class="tm">어제</span></div>
-                    <div class="inbox-row"><span class="dot read"></span><div style="min-width:0"><div class="nm">박현우</div><div class="pv">PM/PL 디자이너 · 경력 9년</div></div><span class="tm">3일</span></div>
-                  </div>
+              <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">1</span>지원자 목록 · 전체 23명 <span class="mini" style="font-weight:500;margin-left:8px">행 클릭 → 지원 상세(CMS-13)</span></div>
+              <table class="dt">
+                <thead><tr><th style="width:90px">전형</th><th style="width:130px">이름</th><th>지원 직군</th><th style="width:120px">경력</th><th style="width:110px">접수일</th><th style="width:70px">관리</th></tr></thead>
+                <tbody>
+                  <tr data-go="s13"><td><span class="badge b-new"><span class="b"></span> 서류검토</span></td><td><div class="pj"><div class="tt">한지민</div></div></td><td class="mini">웹/모바일 기획자 (팀원)</td><td class="mini">4년</td><td class="mini">방금</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s13"><td><span class="badge b-new"><span class="b"></span> 서류검토</span></td><td><div class="pj"><div class="tt">오세훈</div></div></td><td class="mini">디자이너 (팀원)</td><td class="mini">2년</td><td class="mini">2시간 전</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s13"><td><span class="badge b-new"><span class="b"></span> 서류검토</span></td><td><div class="pj"><div class="tt">김도현</div></div></td><td class="mini">퍼블리셔</td><td class="mini">5년</td><td class="mini">5시간 전</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s13"><td><span class="badge b-doing"><span class="b"></span> 면접</span></td><td><div class="pj"><div class="tt">이수진</div></div></td><td class="mini">PM/PL 기획자</td><td class="mini">8년</td><td class="mini">어제</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                  <tr data-go="s13"><td><span class="badge b-done"><span class="b"></span> 합격</span></td><td><div class="pj"><div class="tt">박현우</div></div></td><td class="mini">PM/PL 디자이너</td><td class="mini">9년</td><td class="mini">3일 전</td><td><button class="iconbtn" title="상세">↗</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desc"><h4>화면 구성</h4>
+        <table>
+          <tr><th class="no">No</th><th class="area">영역</th><th>기능 및 설명</th><th class="rmk">비고</th></tr>
+          <tr><td class="no">1</td><td class="area">지원자 목록</td><td>입사지원 접수 목록. 전형상태·이름·지원직군·경력·접수일. 직군/전형 필터. 행/[↗] 클릭 → 지원 상세.</td><td class="rmk">recruit@ 수신</td></tr>
+        </table>
+      </div>
+      <div class="note"><b>Join = 입사</b> — "입사하고 싶다". 프로젝트 의뢰(Contact)와 완전히 분리되어 수신 메일도 recruit@ 이며, 지원 직군은 채용 공고(CMS-10)와 연동됩니다.</div>
+      <div class="note fe">🖥 <b>프론트(사이트) 작업 필요</b> — 현재 <code>join.html</code>은 <b>직군 목록 + 이메일 안내</b>만 있고 지원 폼이 없습니다. 이 접수함이 동작하려면 사이트에 입사지원 폼(이력서·포트폴리오 첨부)을 신규 제작하고 서버 저장(PHP)에 연결해야 합니다.</div>
+    </section>
+
+    <!-- S13 입사지원 상세 -->
+    <section class="screen" id="s13">
+      <div class="sc-head"><span class="sc-id">CMS-13</span><span class="sc-title">입사지원 상세</span></div>
+      <div class="sc-path">경로 <b>/admin/careers/apply/view</b> · 지원자 한 명 상세 · 전형 상태 관리</div>
+      <div class="frame">
+        <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/careers/apply/view?id=1</span></div>
+        <div class="adm">
+          <div class="adm-side">
+            <div class="adm-brand"><div class="lg">R</div><div><b>RIANAG CMS</b><em>Works 관리</em></div></div>
+            <div class="adm-cap">MENU</div>
+            <div class="adm-nav" data-go="s2"><span class="i">▧</span> 대시보드</div>
+            <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
+            <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
+            <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
+            <div class="adm-nav on" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav" data-go="s14"><span class="i">⚙</span> 설정</div>
+            <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
+          </div>
+          <div class="adm-main">
+            <div class="adm-bar"><div><div class="crumb">홈 / 채용 / 지원 접수 / <b>상세</b></div><div class="ttl">입사지원 상세</div></div><div class="sp"></div><button class="wf-btn ghost" data-go="s12">← 목록</button><button class="wf-btn ghost">메일 회신</button><button class="wf-btn">저장</button></div>
+            <div class="adm-body">
+              <div class="card" style="max-width:760px">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                  <div><div style="font-size:15px;font-weight:800">한지민 <span class="mini" style="font-weight:500">· 웹/모바일 기획자 지원</span></div><div class="mini">접수 2026-07-13 15:02</div></div>
+                  <span class="badge b-new"><span class="b"></span> 서류 검토</span>
                 </div>
-                <div>
-                  <div style="font-size:12px;font-weight:800;display:flex;align-items:center;margin:0 0 9px"><span class="nchip">2</span>지원 상세</div>
-                  <div class="inbox-detail">
-                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-                      <div><div style="font-size:14px;font-weight:800">한지민 <span class="mini" style="font-weight:500">· 웹/모바일 기획자 지원</span></div><div class="mini">접수 2026-07-13 15:02</div></div>
-                      <span class="badge b-new"><span class="b"></span> 서류 검토</span>
-                    </div>
-                    <div class="kv"><div class="k">지원 직군</div><div class="v">웹/모바일 기획자 (팀원)</div></div>
-                    <div class="kv"><div class="k">경력</div><div class="v">4년 (이커머스 UX 기획)</div></div>
-                    <div class="kv"><div class="k">연락처</div><div class="v">010-9876-5432</div></div>
-                    <div class="kv"><div class="k">이메일</div><div class="v">jimin.han@gmail.com</div></div>
-                    <div class="kv"><div class="k">제출 서류</div><div class="v" style="display:flex;gap:8px;flex-wrap:wrap"><span class="filechip">📄 이력서_한지민.pdf</span><span class="filechip">🎨 포트폴리오_한지민.pdf · 12MB</span></div></div>
-                    <div class="kv"><div class="k">한 줄 소개</div><div class="v">사용자 리서치 기반의 커머스 기획을 지향합니다.</div></div>
-                    <div style="display:flex;align-items:center;gap:8px;margin-top:16px;flex-wrap:wrap">
-                      <span class="flabel" style="margin:0">전형 상태</span>
-                      <span class="seg"><span class="on">서류검토</span><span>면접</span><span>합격</span><span>불합격</span></span>
-                      <div class="sp" style="flex:1"></div>
-                      <button class="wf-btn ghost">메일 회신</button><button class="wf-btn">저장</button>
-                    </div>
-                    <div class="field" style="margin-top:12px"><label class="flabel">평가 메모</label><textarea class="inp" rows="2" readonly>포트폴리오 완성도 우수 · 커머스 기획 경험 적합 · 1차 면접 진행 예정</textarea></div>
-                  </div>
+                <div class="kv"><div class="k">지원 직군</div><div class="v">웹/모바일 기획자 (팀원)</div></div>
+                <div class="kv"><div class="k">경력</div><div class="v">4년 (이커머스 UX 기획)</div></div>
+                <div class="kv"><div class="k">연락처</div><div class="v">010-9876-5432</div></div>
+                <div class="kv"><div class="k">이메일</div><div class="v">jimin.han@gmail.com</div></div>
+                <div class="kv"><div class="k">제출 서류</div><div class="v" style="display:flex;gap:8px;flex-wrap:wrap"><span class="filechip">📄 이력서_한지민.pdf</span><span class="filechip">🎨 포트폴리오_한지민.pdf · 12MB</span></div></div>
+                <div class="kv"><div class="k">한 줄 소개</div><div class="v">사용자 리서치 기반의 커머스 기획을 지향합니다.</div></div>
+                <div style="display:flex;align-items:center;gap:8px;margin-top:18px;flex-wrap:wrap">
+                  <span class="flabel" style="margin:0">전형 상태</span>
+                  <span class="seg"><span class="on">서류검토</span><span>면접</span><span>합격</span><span>불합격</span></span>
                 </div>
+                <div class="field" style="margin-top:14px;margin-bottom:0"><label class="flabel">평가 메모 <span class="hint">관리자만 표시</span></label><textarea class="inp" rows="2" readonly>포트폴리오 완성도 우수 · 커머스 기획 경험 적합 · 1차 면접 진행 예정</textarea></div>
               </div>
             </div>
           </div>
@@ -1070,17 +1151,15 @@ Watch on</textarea>
       <div class="desc"><h4>화면 구성</h4>
         <table>
           <tr><th class="no">No</th><th class="area">영역</th><th>기능 및 설명</th><th class="rmk">비고</th></tr>
-          <tr><td class="no">1</td><td class="area">지원자 목록</td><td>입사지원 접수 목록(신규=파란점). 이름·지원직군·경력. 직군/전형 필터.</td><td class="rmk">recruit@ 수신</td></tr>
-          <tr><td class="no">2</td><td class="area">지원 상세</td><td>지원 직군·경력·연락처, <b>이력서·포트폴리오 첨부</b> 확인. 전형상태(서류→면접→합격/불합격), 평가 메모.</td><td class="rmk">입사 전용</td></tr>
+          <tr><td class="no">1</td><td class="area">지원자 정보</td><td>지원 직군·경력·연락처·이메일, <b>이력서·포트폴리오 첨부</b>, 한 줄 소개 확인.</td><td class="rmk">읽기</td></tr>
+          <tr><td class="no">2</td><td class="area">전형 처리</td><td>전형상태(서류검토→면접→합격/불합격) 변경, 메일 회신, 평가 메모.</td><td class="rmk">-</td></tr>
         </table>
       </div>
-      <div class="note"><b>Join = 입사</b> — "입사하고 싶다". 프로젝트 의뢰(Contact)와 완전히 분리되어 수신 메일도 recruit@ 이며, 지원 직군은 채용 공고(CMS-09)와 연동됩니다.</div>
-      <div class="note fe">🖥 <b>프론트(사이트) 작업 필요</b> — 현재 <code>join.html</code>은 <b>직군 목록 + 이메일 안내</b>만 있고 지원 폼이 없습니다. 이 접수함이 동작하려면 <b>사이트에 입사지원 폼(이름·연락처·이메일·지원직군·이력서/포트폴리오 첨부)을 신규 제작</b>하고 서버 저장(PHP)에 연결해야 합니다.</div>
     </section>
 
-<!-- S11 설정 -->
-    <section class="screen" id="s11">
-      <div class="sc-head"><span class="sc-id">CMS-11</span><span class="sc-title">설정</span></div>
+    <!-- S14 설정 -->
+    <section class="screen" id="s14">
+      <div class="sc-head"><span class="sc-id">CMS-14</span><span class="sc-title">설정</span></div>
       <div class="sc-path">경로 <b>/admin/settings</b> · 관리자 계정 · 사이트 정보 · 보안</div>
       <div class="frame">
         <div class="browserbar"><i></i><i></i><i></i><span class="url">rianag.com/admin/settings</span></div>
@@ -1092,8 +1171,8 @@ Watch on</textarea>
             <div class="adm-nav" data-go="s3"><span class="i">▤</span> Works <span class="cnt">9</span></div>
             <div class="adm-nav" data-go="s5"><span class="i">◪</span> What's on <span class="cnt">8</span></div>
             <div class="adm-nav" data-go="s7"><span class="i">✉</span> Contact <span class="cnt">3</span></div>
-            <div class="adm-nav" data-go="s9"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
-            <div class="adm-nav on" data-go="s11"><span class="i">⚙</span> 설정</div>
+            <div class="adm-nav" data-go="s10"><span class="i">◈</span> Join Our Team <span class="cnt">5</span></div>
+            <div class="adm-nav on" data-go="s14"><span class="i">⚙</span> 설정</div>
             <div class="adm-foot"><div class="ava">이</div><div class="who">이준경<em>관리자</em></div></div>
           </div>
           <div class="adm-main">
@@ -1176,7 +1255,7 @@ Watch on</textarea>
    ========================================================================= */
 const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbym2zUQzYsiWZ5I6TUVICjfIQzVNhZAgHpxjo6Hm2URP8zuBpq5bcSxEi_2uZ-u_-G1/exec"; // ← 배포한 Apps Script 웹앱 URL
 
-const SC_NAMES = { s0:"개요 · 구성", s1:"로그인", s2:"대시보드", s3:"프로젝트 목록", s4:"프로젝트 등록/수정", s5:"What's on 목록", s6:"What's on 등록/수정", s7:"문의 접수함", s8:"문의 폼 설정", s9:"채용 공고", s10:"입사지원 접수함", s11:"설정" };
+const SC_NAMES = { s0:"개요 · 구성", s1:"로그인", s2:"대시보드", s3:"프로젝트 목록", s4:"프로젝트 등록/수정", s5:"What's on 목록", s6:"What's on 등록/수정", s7:"문의 접수함", s8:"문의 상세", s9:"문의 폼 설정", s10:"채용 공고 목록", s11:"채용 공고 등록/수정", s12:"입사지원 접수함", s13:"입사지원 상세", s14:"설정" };
 const LKEY = "rianag_cms_feedback_v1", NKEY = "rianag_cms_name";
 const CLOUD = /^https?:\/\//.test(SHEET_ENDPOINT.trim());
 let cur = "s0", cache = {}, pollTimer = null;
@@ -1285,7 +1364,7 @@ async function removeFb(id){
 }
 
 /* ---- 네비게이션 전환 (상단 탭 + 좌우 슬라이드) ---- */
-const SCREENS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11'];
+const SCREENS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14'];
 function goTo(id, dir){
   if(id===cur || !SCREENS.includes(id)) return;
   if(dir===undefined) dir = SCREENS.indexOf(id) > SCREENS.indexOf(cur) ? 1 : -1;
