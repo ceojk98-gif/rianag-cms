@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>피드백 미리보기 · 승인 대기</title>
+<style>
+:root{--bg:#eef1f5;--ink:#1f2733;--sub:#5b6675;--mute:#8b96a5;--line:#d7dee7;--line2:#e7ecf2;--accent:#4f46e5;--accent-s:#eef0fe;--ok:#16a34a;--oks:#e9f7ef;--warn:#e11d48}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Malgun Gothic','맑은 고딕',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.top{position:sticky;top:0;z-index:10;background:#141b26;color:#fff;display:flex;align-items:center;gap:12px;padding:13px 22px}
+.top .lg{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#22d3ee);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.top b{font-size:15px}
+.top .tag{font-size:11px;color:#b7791f;background:#fff4e5;border-radius:999px;padding:3px 10px;font-weight:700}
+.top .sp{flex:1}
+.top .rf{font-size:12px;color:#9fb0c4;background:none;border:1px solid #2c3a4d;border-radius:7px;padding:6px 12px}
+.wrap{max-width:860px;margin:22px auto;padding:0 20px 60px}
+.intro{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px;font-size:12.5px;color:var(--sub);line-height:1.7;margin-bottom:18px}
+.intro b{color:var(--ink)}
+.empty{text-align:center;color:var(--mute);font-size:13px;padding:60px 20px;background:#fff;border:1px dashed var(--line);border-radius:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:17px 19px;margin-bottom:14px}
+.card .date{font-size:11px;color:var(--mute);font-weight:700}
+.card .scr{display:inline-block;font-size:11px;font-weight:700;color:var(--accent);background:var(--accent-s);border-radius:6px;padding:3px 10px;margin:6px 0}
+.card .fb{background:#f7f9fc;border:1px solid var(--line2);border-radius:9px;padding:11px 13px;font-size:12.5px;color:var(--sub);margin:8px 0}
+.card .fb .who{font-weight:700;color:var(--ink);font-size:11.5px;margin-bottom:3px}
+.card .prop{font-size:12.5px;color:var(--ink);line-height:1.7;margin:6px 0 12px}
+.card .prop b{color:var(--accent)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.btn{border:none;border-radius:8px;padding:9px 16px;font-size:12.5px;font-weight:700;cursor:pointer}
+.btn.open{background:#fff;color:var(--sub);border:1px solid var(--line)}
+.btn.apply{background:var(--ok);color:#fff}
+.btn.reject{background:#fff;color:var(--warn);border:1px solid #f3c9d3}
+.btn:disabled{opacity:.5;cursor:default}
+.state{font-size:11.5px;font-weight:700;padding:6px 11px;border-radius:7px}
+.state.done{background:var(--oks);color:#15803d}
+.state.rej{background:#fdeef2;color:var(--warn)}
+.foot{font-size:11.5px;color:var(--mute);text-align:center;margin-top:24px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="lg">R</div>
+  <b>피드백 미리보기 · 승인 대기</b>
+  <span class="tag">REVIEW</span>
+  <div class="sp"></div>
+  <button class="rf" onclick="location.reload()">↻ 새로고침</button>
+</div>
+<div class="wrap">
+  <div class="intro">
+    자동 점검(48h)이 <b>새 피드백</b>을 발견하면, 여기에 <b>수정 적용된 미리보기</b>가 날짜별로 쌓입니다.<br>
+    [🔍 미리보기 열기]로 확인 후 <b>[✅ 적용]</b>을 누르면 <b>다음 점검 때 라이브에 반영</b>됩니다. (되돌리기 가능) · <b>[❌ 반려]</b>는 스킵.
+  </div>
+  <div id="list"></div>
+  <div class="foot">이 페이지는 화면설계서의 <b>‘🕓 미리보기’</b> 탭에서 새 창으로 열립니다.<br>승인/반려는 구글 시트 <b>‘_승인’</b> 탭에 기록되고, 다음 자동 점검 때 처리됩니다.</div>
+</div>
+<script>
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbym2zUQzYsiWZ5I6TUVICjfIQzVNhZAgHpxjo6Hm2URP8zuBpq5bcSxEi_2uZ-u_-G1/exec";
+const esc = s => String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+async function record(previewId, decision, btnWrap){
+  btnWrap.querySelectorAll('button').forEach(b=>b.disabled=true);
+  try{
+    await fetch(SHEET_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body:JSON.stringify({action:'add',sheet:'_승인',id:previewId,name:decision,text:previewId,time:new Date().toISOString(),ts:Date.now()})});
+    const s=document.createElement('span'); s.className='state '+(decision==='적용'?'done':'rej');
+    s.textContent = decision==='적용' ? '✅ 승인됨 — 다음 점검 때 반영' : '❌ 반려됨';
+    btnWrap.innerHTML=''; btnWrap.appendChild(s);
+  }catch(e){ alert('기록 실패 — 잠시 후 다시 시도해주세요.'); btnWrap.querySelectorAll('button').forEach(b=>b.disabled=false); }
+}
+
+fetch('./queue.json?t='+Date.now()).then(r=>r.json()).then(items=>{
+  const list=document.getElementById('list');
+  const pending=(items||[]).filter(x=>x.status!=='applied'&&x.status!=='rejected');
+  if(!pending.length){ list.innerHTML='<div class="empty">대기 중인 미리보기가 없습니다.<br>새 피드백이 들어오면 자동 점검이 여기에 미리보기를 올립니다.</div>'; return; }
+  list.innerHTML = pending.map(x=>`
+    <div class="card">
+      <div class="date">🕓 ${esc(x.date||'')}</div>
+      <div class="scr">${esc(x.screenLabel||x.screen||'')}</div>
+      <div class="fb"><div class="who">💬 ${esc(x.fbName||'익명')} 님 피드백</div>${esc(x.fbText||'')}</div>
+      <div class="prop"><b>제안</b> — ${esc(x.proposal||'')}</div>
+      <div class="row" data-pid="${esc(x.id)}">
+        ${x.file?`<a class="btn open" href="${esc(x.file)}" target="_blank" rel="noopener">🔍 미리보기 열기</a>`:''}
+        <button class="btn apply">✅ 적용</button>
+        <button class="btn reject">❌ 반려</button>
+      </div>
+    </div>`).join('');
+  list.querySelectorAll('.row').forEach(row=>{
+    const pid=row.dataset.pid;
+    row.querySelector('.apply').addEventListener('click',()=>record(pid,'적용',row));
+    row.querySelector('.reject').addEventListener('click',()=>record(pid,'반려',row));
+  });
+}).catch(()=>{document.getElementById('list').innerHTML='<div class="empty">목록을 불러오지 못했습니다.</div>';});
+</script>
+</body>
+</html>
