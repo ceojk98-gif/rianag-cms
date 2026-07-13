@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>콘텐츠 구조 추천 — 등록 화면 제안</title>
+<style>
+:root{
+  --bg:#eef1f5; --panel:#fff; --ink:#1f2733; --sub:#5b6675; --mute:#8b96a5;
+  --line:#d7dee7; --line2:#e7ecf2; --soft:#f4f7fa;
+  --accent:#4f46e5; --accent-s:#eef0fe; --ok:#16a34a; --oks:#e9f7ef; --warn:#e11d48; --teal:#0f766e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Malgun Gothic','맑은 고딕',-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+button{font-family:inherit;cursor:pointer}
+.top{position:sticky;top:0;z-index:10;background:#141b26;color:#fff;display:flex;align-items:center;gap:14px;padding:12px 22px;flex-wrap:wrap}
+.top .lg{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#22d3ee);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.top b{font-size:15px}
+.top .tag{font-size:11px;color:#0f766e;background:#a7f3d0;border-radius:999px;padding:3px 10px;font-weight:700}
+.top .sp{flex:1}
+.seg{display:inline-flex;background:#26303f;border-radius:9px;padding:3px}
+.seg button{font-size:12.5px;padding:7px 16px;border-radius:7px;color:#aab6c8;font-weight:700;background:none;border:none}
+.seg button.on{background:var(--accent);color:#fff}
+.wrap{max-width:920px;margin:22px auto;padding:0 20px 60px}
+.intro{background:#eef0fe;border:1px solid #c9cdfa;color:#312e81;border-radius:10px;padding:13px 16px;font-size:12.5px;line-height:1.7;margin-bottom:20px}
+.pane{display:none}.pane.on{display:block}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:16px;position:relative}
+.card>h3{font-size:13.5px;font-weight:800;display:flex;align-items:center;gap:9px;margin-bottom:4px}
+.card>h3 .n{width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.card .why{font-size:11.5px;color:var(--teal);background:#d9f2ee;border-radius:6px;padding:2px 9px;font-weight:700}
+.card .sub{font-size:11.5px;color:var(--mute);margin:2px 0 15px 31px}
+.field{margin-bottom:14px}.field:last-child{margin-bottom:0}
+.flabel{font-size:11.5px;font-weight:700;color:var(--sub);margin-bottom:6px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.flabel .hint{font-weight:500;color:var(--mute);font-size:10.5px}
+.req{color:var(--warn)}
+.inp{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:12.5px;color:var(--ink);font-family:inherit;background:#fff}
+.inp:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-s)}
+textarea.inp{resize:none;line-height:1.6}
+.row{display:flex;gap:12px}.row .field{flex:1;margin-bottom:0}
+.counter{font-size:10.5px;color:var(--accent);text-align:right;margin-top:5px;font-weight:600}
+.tseg{display:inline-flex;background:#eef1f5;border-radius:8px;padding:3px}
+.tseg span{font-size:11px;padding:6px 13px;border-radius:6px;color:var(--sub);font-weight:600}
+.tseg span.on{background:#fff;color:var(--accent);box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.auto-badge{font-size:10.5px;font-weight:700;color:#0369a1;background:#eef7fb;border:1px solid #cfe6f3;border-radius:6px;padding:3px 10px;display:inline-flex;align-items:center;gap:5px}
+/* 3 image slots */
+.imgslots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.slot{border:1.5px dashed #c3ccd8;border-radius:11px;background:#f8fafc;padding:14px;text-align:center}
+.slot .tt{font-size:11.5px;font-weight:800;color:var(--ink)}
+.slot .sp2{font-size:10px;color:var(--mute);margin:3px 0 10px}
+.slot .box{border-radius:9px;background-size:cover;background-position:center;height:96px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;position:relative;overflow:hidden}
+.slot .box.up{background:#eef1f5;color:var(--mute);border:1px dashed #c9d2dd;flex-direction:column;gap:5px}
+.slot .box.up .ic{width:30px;height:30px;border-radius:8px;background:var(--accent-s);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:16px}
+.slot .reg{font-size:9.5px;color:var(--mute);margin-top:8px}
+.gal{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.gal .g{position:relative;aspect-ratio:1/1;border-radius:8px;background-size:cover;background-position:center;border:1px solid rgba(0,0,0,.1)}
+.gal .g .o{position:absolute;top:4px;left:4px;width:16px;height:16px;border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font-size:8.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.gal .add{aspect-ratio:1/1;border:1.5px dashed #c3ccd8;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--mute);font-size:9.5px;text-align:center;background:#f8fafc}
+.drop{border:1.5px dashed #c3ccd8;border-radius:10px;background:#f8fafc;padding:16px;text-align:center;color:var(--mute);font-size:11.5px}
+.editor{border:1px solid var(--line);border-radius:11px;background:#f8fafc;padding:6px}
+.eblock{border:1px solid var(--line2);border-radius:9px;padding:11px 13px;margin:6px;display:flex;gap:11px;align-items:flex-start;background:#fff}
+.eblock .bh{font-size:9px;font-weight:700;color:#fff;background:#7c8797;border-radius:4px;padding:2px 7px;flex:none;margin-top:1px}
+.eblock .bh.img{background:var(--accent)}
+.eblock .bc{flex:1;font-size:12px;color:var(--sub)}
+.eblock .imgph{height:60px;border-radius:6px}
+.eadd{display:flex;gap:8px;padding:8px 6px 4px}
+.eadd span{font-size:11px;border:1px dashed var(--line);border-radius:7px;padding:7px 12px;color:var(--accent);font-weight:600;background:#fff}
+.wf-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:12.5px;font-weight:700}
+.wf-btn.ghost{background:#fff;color:var(--sub);border:1px solid var(--line)}
+.savebar{display:flex;align-items:center;gap:8px;justify-content:flex-end;margin-top:6px}
+.savebar .sp{flex:1;font-size:11px;color:var(--mute)}
+.foot{font-size:11.5px;color:var(--mute);text-align:center;margin-top:26px;line-height:1.7}
+@media(max-width:720px){.imgslots{grid-template-columns:1fr}.gal{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="lg">R</div>
+  <b>콘텐츠 구조 추천 — 등록 화면 제안</b>
+  <span class="tag">RECOMMEND</span>
+  <div class="sp"></div>
+  <div class="seg">
+    <button class="on" data-p="works">Works (프로젝트)</button>
+    <button data-p="whatson">What's on (인사이트)</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="intro">
+    <b>“이렇게 정리하면 어떤가요?”</b> — 다양한 콘텐츠를 ① <b>이미지 3종 분리</b> · ② <b>텍스트 위계</b> · ③ <b>메타 자동 연동</b> · ④ <b>상세 최소 조립</b> 원칙으로 재배치한 등록 화면 제안입니다. 실제 CMS-04·06을 이 구조로 만들면 됩니다.
+  </div>
+
+  <!-- ===== WORKS ===== -->
+  <div class="pane on" id="works">
+    <div class="card">
+      <h3><span class="n">1</span>이미지 <span class="why">🖼 3종 분리 — 섞이지 않게</span></h3>
+      <div class="sub">목록·상세·본문 이미지는 규격과 쓰임이 달라 <b>업로드 칸을 3개로 나눕니다.</b></div>
+      <div class="imgslots">
+        <div class="slot">
+          <div class="tt">목록 썸네일</div><div class="sp2">카드/스와이퍼 · 1:1 정사각</div>
+          <div class="box" style="background:#1d1617">CGV</div>
+          <div class="reg">1120×1120 · 자동압축 ≤300KB · 이미지/영상</div>
+        </div>
+        <div class="slot">
+          <div class="tt">상세 히어로</div><div class="sp2">상세 최상단 대형</div>
+          <div class="box up"><div class="ic">⬆</div>대형 가로 컷</div>
+          <div class="reg">예 3840×2560 · 자동 리사이즈</div>
+        </div>
+        <div class="slot">
+          <div class="tt">본문 이미지</div><div class="sp2">상세 본문 · 다중</div>
+          <div class="box up"><div class="ic">⬆</div>여러 장</div>
+          <div class="reg">위→아래 순서 · WebP 변환</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><span class="n">2</span>텍스트 <span class="why">🔠 위계 고정</span></h3>
+      <div class="sub">대제목 &gt; 브랜드 순서. <b>카드엔 이 둘만</b> 노출됩니다.</div>
+      <div class="field">
+        <label class="flabel">프로젝트 대제목 (Title) <span class="req">*</span><span class="hint">줄바꿈 지원 · 줄당 ≤14자 · 최대 4줄</span></label>
+        <textarea class="inp" rows="3" readonly>Go deep
+Dive in
+Watch on</textarea>
+        <div class="counter">3 / 4줄 · 최대 8자</div>
+      </div>
+      <div class="field" style="margin-bottom:0"><label class="flabel">브랜드 / 서브타이틀 <span class="hint">2줄 · 줄당 ≤13자 · 모바일 자동 대문자</span></label><input class="inp" value="CGV ON MOBILE"></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="n">3</span>메타 정보 <span class="auto-badge">🔗 한 번 입력 → 목록·상세 정보바 자동 반영</span></h3>
+      <div class="sub">산업·날짜·타입은 여기서만 입력하면 상세 정보바에 자동으로 들어갑니다. (중복 입력 없음)</div>
+      <div class="row">
+        <div class="field"><label class="flabel">산업 <span class="hint">≤20자</span></label><input class="inp" value="Commerce"></div>
+        <div class="field"><label class="flabel">날짜 <span class="hint">≤24자</span></label><input class="inp" value="July, 2025"></div>
+      </div>
+      <div class="field" style="margin:14px 0 0"><label class="flabel">프로젝트 타입 <span class="hint">‘/’로 구분 · ≤60자</span></label><input class="inp" value="UI/UX Design/Mobile Web&App/PC Web"></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="n">4</span>설명 (Objective) <span class="why">✍ 1~2문단</span></h3>
+      <div class="sub">상세 상단에 들어가는 프로젝트 소개 문단.</div>
+      <div class="field" style="margin-bottom:0"><textarea class="inp" rows="2" readonly>모바일 환경에 최적화된 CGV 예매 경험을 다시 설계했습니다.</textarea></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="n">5</span>상세 본문 이미지 <span class="why">🧩 최소 조립 — 순서대로 나열</span></h3>
+      <div class="sub">복잡한 자유 레이아웃 대신, 이미지를 <b>위→아래 순서로</b> 올리면 그대로 상세가 됩니다.</div>
+      <div class="gal">
+        <div class="g" style="background:#1d1617"><span class="o">1</span></div>
+        <div class="g" style="background:#2a2140"><span class="o">2</span></div>
+        <div class="g" style="background:#112233"><span class="o">3</span></div>
+        <div class="g" style="background:#3a2a2a"><span class="o">4</span></div>
+        <div class="g" style="background:#20303a"><span class="o">5</span></div>
+        <div class="add">＋<br>추가</div>
+      </div>
+    </div>
+
+    <div class="savebar"><div class="sp">※ 실제 등록 화면(CMS-04)을 이 구조로 구성하는 제안입니다.</div><button class="wf-btn ghost">미리보기</button><button class="wf-btn">저장</button></div>
+  </div>
+
+  <!-- ===== WHAT'S ON ===== -->
+  <div class="pane" id="whatson">
+    <div class="card">
+      <h3><span class="n">1</span>이미지 <span class="why">🖼 2종 분리</span></h3>
+      <div class="sub">목록 카드용과 상세 히어로용을 나눕니다.</div>
+      <div class="imgslots" style="grid-template-columns:1fr 1fr">
+        <div class="slot">
+          <div class="tt">목록 썸네일</div><div class="sp2">카드 대표</div>
+          <div class="box" style="background:#26324a">도서</div>
+          <div class="reg">자동압축 · 카드 비율</div>
+        </div>
+        <div class="slot">
+          <div class="tt">상세 히어로</div><div class="sp2">상세 최상단</div>
+          <div class="box up"><div class="ic">⬆</div>대형 비주얼</div>
+          <div class="reg">자동 리사이즈</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><span class="n">2</span>분류 <span class="auto-badge">🔗 카테고리·태그 → 목록·상세 자동 반영</span></h3>
+      <div class="sub">한 번 지정하면 목록 카드와 상세에 함께 표시됩니다.</div>
+      <div class="field"><label class="flabel">카테고리</label><span class="tseg"><span class="on">도서</span><span>트렌드</span><span>공연</span><span>일상</span><span>디자인</span><span>웹툰</span></span></div>
+      <div class="row" style="margin-top:2px">
+        <div class="field"><label class="flabel">태그 <span class="hint">‘#’ 자동</span></label><input class="inp" value="#StartWithWhy #우리는왜일을하는가"></div>
+        <div class="field" style="flex:.5"><label class="flabel">게시 상태</label><span class="tseg"><span class="on">게시</span><span>임시</span></span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><span class="n">3</span>텍스트 <span class="why">🔠 제목 · 요약</span></h3>
+      <div class="sub">요약글은 목록 카드에 노출됩니다.</div>
+      <div class="field"><label class="flabel">제목 <span class="req">*</span></label><input class="inp" value="START WITH WHY (BY 사이먼 사이넥) REVIEW"></div>
+      <div class="field" style="margin-bottom:0"><label class="flabel">요약글 <span class="hint">목록 카드 노출</span></label><textarea class="inp" rows="2" readonly>좋은 목표란 무엇인가에 대한 리뷰.</textarea></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="n">4</span>본문 <span class="why">🧩 글+이미지 블록 (블로그형)</span></h3>
+      <div class="sub">문단 텍스트와 이미지를 섞어 위→아래로 배치합니다.</div>
+      <div class="editor">
+        <div class="eblock"><span class="bh img">이미지</span><div style="flex:1"><div class="imgph" style="background:#26324a;height:80px"></div></div></div>
+        <div class="eblock"><span class="bh">텍스트</span><div class="bc">사이먼 사이넥의 ‘Start with Why’는 좋은 목표가 따로 있다고 이야기합니다.</div></div>
+        <div class="eblock"><span class="bh img">이미지</span><div style="flex:1"><div class="imgph" style="background:#1c2536"></div></div></div>
+        <div class="eadd"><span>＋ 텍스트 문단</span><span>＋ 이미지</span><span>＋ 인용구</span></div>
+      </div>
+    </div>
+
+    <div class="savebar"><div class="sp">※ 실제 등록 화면(CMS-06)을 이 구조로 구성하는 제안입니다.</div><button class="wf-btn ghost">미리보기</button><button class="wf-btn">저장</button></div>
+  </div>
+
+  <div class="foot">이 화면은 화면설계서의 <b>‘★ 콘텐츠 구조(추천)’</b> 탭에서 새 창으로 열립니다.<br>이 구조에 대한 의견은 설계서로 돌아가 각 화면 피드백에 남겨주세요.</div>
+</div>
+
+<script>
+  document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));
+    const p=b.dataset.p;
+    document.querySelectorAll('.pane').forEach(x=>x.classList.toggle('on',x.id===p));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }));
+</script>
+</body>
+</html>
