@@ -302,6 +302,21 @@ textarea.inp{resize:none;line-height:1.65}
 .note.fe{background:#fff4e5;border-color:#f0cf98;color:#8a5a12}
 .note.fe b{color:#7a4a10}
 .note.fe code{background:#fbe6c8;color:#7a4a10;padding:1px 5px;border-radius:4px}
+/* content-model recommendation table */
+.ctbl{width:100%;border-collapse:collapse;font-size:11.5px;background:#fff;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.ctbl th{background:#f6f8fb;color:var(--sub);font-weight:700;text-align:left;padding:8px 10px;font-size:10px;border-bottom:1px solid var(--line);letter-spacing:.02em}
+.ctbl td{padding:8px 10px;border-bottom:1px solid var(--line2);vertical-align:top;color:var(--sub);line-height:1.5}
+.ctbl tr:last-child td{border-bottom:none}
+.ctbl .fn{font-weight:700;color:var(--ink)}
+.ftag{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:5px;white-space:nowrap}
+.ftag.img{background:#eef2ff;color:#4f46e5}
+.ftag.txt{background:#eefaf0;color:#15803d}
+.ftag.sel{background:#fff4e5;color:#b7791f}
+.ftag.auto{background:#eef7fb;color:#0369a1}
+.ftag.vid{background:#fdeef2;color:#be185d}
+.cm-cap{font-size:11px;font-weight:800;color:var(--sub);margin:0 0 7px;display:flex;align-items:center;gap:6px}
+.cm-cap .b{width:6px;height:13px;border-radius:3px;background:var(--accent)}
+.cm-cap.det .b{background:#0f766e}
 @media(max-width:1100px){.wrap{grid-template-columns:1fr}.fb{display:none}}
 </style>
 </head>
@@ -334,8 +349,9 @@ textarea.inp{resize:none;line-height:1.65}
     <div class="tab" data-sc="s12"><span class="n">12</span> 입사지원 접수함</div>
     <div class="tab" data-sc="s13"><span class="n">13</span> 입사지원 상세</div>
     <div class="tab" data-sc="s14"><span class="n">14</span> 설정</div>
+    <div class="tab" data-sc="s15"><span class="n">★</span> 콘텐츠 구조(추천)</div>
   </div>
-  <span class="tabpos" id="tabPos">1 / 15</span>
+  <span class="tabpos" id="tabPos">1 / 16</span>
   <button class="navarrow" id="nextBtn" title="다음 화면 (→)">›</button>
 </div>
 
@@ -1220,6 +1236,87 @@ Watch on</textarea>
       </div>
     </section>
 
+    <!-- S15 콘텐츠 구조 추천 -->
+    <section class="screen" id="s15">
+      <div class="sc-head"><span class="sc-id" style="background:#0f766e">추천</span><span class="sc-title">콘텐츠 구조 정리 (Works · What's on)</span></div>
+      <div class="sc-path">등록 콘텐츠가 많아 <b>필드를 목록용/상세용으로 정리한 추천안</b> · 이 구조를 기준으로 등록/수정 화면(CMS-04·06)을 구성</div>
+      <div class="frame"><div class="canvas">
+        <div class="note" style="background:#eef0fe;border-color:#c9cdfa;color:#312e81;margin-bottom:20px">
+          <b>정리 원칙 3가지</b> — ① 필드를 <b>‘목록(카드)용’과 ‘상세(페이지)용’</b>으로 분리 · ② 이미지는 <b>3종</b>(목록 썸네일 / 상세 히어로 / 본문 이미지)으로 구분 · ③ 산업·날짜·타입·카테고리·태그 등 <b>메타는 한 번만 입력 → 목록·상세 자동 연동</b>(중복 입력 제거)
+        </div>
+
+        <!-- ===== Works ===== -->
+        <div class="wf-h" style="display:flex;align-items:center;gap:8px;margin-bottom:12px">🗂 Works (프로젝트) <span class="mini" style="font-weight:500">project.html · works_view</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px">
+          <div>
+            <div class="cm-cap"><span class="b"></span>목록 / 카드에 노출 <span class="mini" style="font-weight:500">project.html</span></div>
+            <table class="ctbl">
+              <tr><th style="width:34%">필드</th><th style="width:22%">유형</th><th>예시 · 제약</th></tr>
+              <tr><td class="fn">노출 · 정렬</td><td><span class="ftag sel">토글·숫자</span></td><td>사이트 표시 여부 · 목록 순서</td></tr>
+              <tr><td class="fn">대표색</td><td><span class="ftag sel">컬러</span></td><td>#1d1617 · 모바일 스와이퍼 배경</td></tr>
+              <tr><td class="fn">목록 썸네일</td><td><span class="ftag img">이미지</span> <span class="ftag vid">영상</span></td><td><b>1120×1120 정사각</b> · 자동압축(≤300KB) · MP4 가능</td></tr>
+              <tr><td class="fn">프로젝트 대제목 (Title)</td><td><span class="ftag txt">텍스트·멀티</span></td><td>“Go deep / Dive in / Watch on” · 줄당 ≤14자·최대 4줄</td></tr>
+              <tr><td class="fn">브랜드 / 서브타이틀</td><td><span class="ftag txt">텍스트</span></td><td>“CGV ON MOBILE” · 2줄·줄당 ≤13자</td></tr>
+              <tr><td class="fn">산업 (Industry)</td><td><span class="ftag txt">텍스트</span></td><td>Commerce · ≤20자</td></tr>
+              <tr><td class="fn">날짜 (Date)</td><td><span class="ftag txt">텍스트</span></td><td>July, 2025 · ≤24자</td></tr>
+              <tr><td class="fn">프로젝트 타입</td><td><span class="ftag txt">텍스트</span></td><td>UI/UX Design/Mobile Web… · ‘/’ 구분 ≤60자</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="cm-cap det"><span class="b"></span>상세 페이지에 노출 <span class="mini" style="font-weight:500">works_view</span></div>
+            <table class="ctbl">
+              <tr><th style="width:34%">필드</th><th style="width:22%">유형</th><th>예시 · 제약</th></tr>
+              <tr><td class="fn">상세 히어로 비주얼</td><td><span class="ftag img">이미지</span></td><td>상단 대형 가로 컷 (예 3840×2560)</td></tr>
+              <tr><td class="fn">정보바</td><td><span class="ftag auto">자동 연동</span></td><td>Industry · Date · Type → <b>목록 값 자동 반영</b>(재입력X)</td></tr>
+              <tr><td class="fn">Objective (설명글)</td><td><span class="ftag txt">텍스트</span></td><td>프로젝트 소개 문단 1~2개</td></tr>
+              <tr><td class="fn">상세 콘텐츠 (본문 이미지)</td><td><span class="ftag img">이미지·다중</span></td><td>여러 장 위→아래 순서 · 자동 리사이즈·WebP</td></tr>
+            </table>
+            <div class="mini" style="margin-top:8px;color:var(--mute)">※ 현행 상세는 이미지 최대 36컷. 본문은 “이미지 나열”로 단순화(CMS-04).</div>
+          </div>
+        </div>
+
+        <!-- ===== What's on ===== -->
+        <div class="wf-h" style="display:flex;align-items:center;gap:8px;margin-bottom:12px">📝 What's on (인사이트) <span class="mini" style="font-weight:500">insight_list · insight_view</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div>
+            <div class="cm-cap"><span class="b"></span>목록 / 카드에 노출 <span class="mini" style="font-weight:500">insight_list</span></div>
+            <table class="ctbl">
+              <tr><th style="width:34%">필드</th><th style="width:22%">유형</th><th>예시 · 제약</th></tr>
+              <tr><td class="fn">게시 상태</td><td><span class="ftag sel">선택</span></td><td>게시 / 임시저장</td></tr>
+              <tr><td class="fn">목록 썸네일</td><td><span class="ftag img">이미지</span></td><td>카드 대표 이미지</td></tr>
+              <tr><td class="fn">카테고리</td><td><span class="ftag sel">선택</span></td><td>도서·트렌드·공연·일상·디자인·웹툰 (6종)</td></tr>
+              <tr><td class="fn">요약글</td><td><span class="ftag txt">텍스트</span></td><td>카드에 보이는 한 줄 소개</td></tr>
+              <tr><td class="fn">태그</td><td><span class="ftag txt">텍스트·다중</span></td><td>#StartWithWhy · ‘#’ 자동</td></tr>
+              <tr><td class="fn">날짜</td><td><span class="ftag sel">날짜</span></td><td>2025.06.20</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="cm-cap det"><span class="b"></span>상세 페이지에 노출 <span class="mini" style="font-weight:500">insight_view</span></div>
+            <table class="ctbl">
+              <tr><th style="width:34%">필드</th><th style="width:22%">유형</th><th>예시 · 제약</th></tr>
+              <tr><td class="fn">상세 히어로 이미지</td><td><span class="ftag img">이미지</span></td><td>상단 대형 비주얼</td></tr>
+              <tr><td class="fn">제목</td><td><span class="ftag txt">텍스트</span></td><td>“START WITH WHY (BY 사이먼 사이넥) REVIEW”</td></tr>
+              <tr><td class="fn">본문</td><td><span class="ftag txt">글</span> <span class="ftag img">이미지</span></td><td>문단·이미지 블록 <b>혼합(블로그형 에디터)</b></td></tr>
+              <tr><td class="fn">카테고리 · 태그</td><td><span class="ftag auto">자동 연동</span></td><td>목록 값 자동 반영(재입력X)</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="note" style="margin-top:22px">
+          <b>추천 정리 포인트</b><br>
+          · <b>이미지 업로드 칸 3개로 분리</b> — ①목록 썸네일(정사각 규격 강제) ②상세 히어로(대형) ③본문 이미지(다중·자동최적화). 섞이지 않게 칸을 나눔.<br>
+          · <b>텍스트 위계 고정</b> — 대제목(Title) &gt; 브랜드(서브) &gt; 메타(산업·날짜·타입) &gt; 설명(Objective). <b>카드엔 대제목+브랜드만</b>, 상세엔 전부.<br>
+          · <b>메타 자동 연동</b> — 산업·날짜·타입 / 카테고리·태그는 <b>한 번만 입력</b> → 목록·상세에 자동 반영해 중복 제거.<br>
+          · <b>상세는 최소 조립</b> — “히어로 1 + 설명 1문단 + 본문 이미지 나열(또는 글+이미지 블록)”. 복잡한 자유 레이아웃은 지양.
+        </div>
+      </div></div>
+      <div class="desc"><h4>비고</h4>
+        <table><tbody>
+          <tr><td class="no">-</td><td class="area">활용</td><td>이 구조를 등록/수정 화면(CMS-04 프로젝트, CMS-06 What's on)의 입력 필드 구성 기준으로 사용. 팀 피드백 후 확정.</td><td class="rmk">추천안</td></tr>
+        </tbody></table>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===== FEEDBACK ===== -->
@@ -1255,7 +1352,7 @@ Watch on</textarea>
    ========================================================================= */
 const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbym2zUQzYsiWZ5I6TUVICjfIQzVNhZAgHpxjo6Hm2URP8zuBpq5bcSxEi_2uZ-u_-G1/exec"; // ← 배포한 Apps Script 웹앱 URL
 
-const SC_NAMES = { s0:"개요 · 구성", s1:"로그인", s2:"대시보드", s3:"프로젝트 목록", s4:"프로젝트 등록/수정", s5:"What's on 목록", s6:"What's on 등록/수정", s7:"문의 접수함", s8:"문의 상세", s9:"문의 폼 설정", s10:"채용 공고 목록", s11:"채용 공고 등록/수정", s12:"입사지원 접수함", s13:"입사지원 상세", s14:"설정" };
+const SC_NAMES = { s0:"개요 · 구성", s1:"로그인", s2:"대시보드", s3:"프로젝트 목록", s4:"프로젝트 등록/수정", s5:"What's on 목록", s6:"What's on 등록/수정", s7:"문의 접수함", s8:"문의 상세", s9:"문의 폼 설정", s10:"채용 공고 목록", s11:"채용 공고 등록/수정", s12:"입사지원 접수함", s13:"입사지원 상세", s14:"설정", s15:"콘텐츠 구조(추천)" };
 const LKEY = "rianag_cms_feedback_v1", NKEY = "rianag_cms_name";
 const CLOUD = /^https?:\/\//.test(SHEET_ENDPOINT.trim());
 let cur = "s0", cache = {}, pollTimer = null;
@@ -1364,7 +1461,7 @@ async function removeFb(id){
 }
 
 /* ---- 네비게이션 전환 (상단 탭 + 좌우 슬라이드) ---- */
-const SCREENS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14'];
+const SCREENS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15'];
 function goTo(id, dir){
   if(id===cur || !SCREENS.includes(id)) return;
   if(dir===undefined) dir = SCREENS.indexOf(id) > SCREENS.indexOf(cur) ? 1 : -1;
